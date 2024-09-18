@@ -1,0 +1,117 @@
+Name,Value,Color(s),Score,Effect,Rarity,SO,Process
+Left Crocks of the Prohibited One,1,Green,,"When all pieces are gathered, create the Prohibited One in your hand. Remove all pieces",Rare,CardPieceSO,Coded
+Left Furry Glove of the Prohibited One,1,Red,,"When all pieces are gathered, create the Prohibited One in your hand. Remove all pieces",Rare,CardPieceSO,Coded
+Right 👌 of the Prohibited One,1,Orange,,"When all pieces are gathered, create the Prohibited One in your hand. Remove all pieces",Rare,CardPieceSO,Coded
+Right Socks with Sandles of the Prohibited One,1,Blue,,"When all pieces are gathered, create the Prohibited One in your hand. Remove all pieces",Rare,CardPieceSO,Coded
+Straightjacket 8,8,Wild,,Prevents playing any card on top of it that isn't an 8.,Rare,StraightJacketSO,Coded
+Draw 25 card,2/5,Wild,250,"When played, remove this card from your deck and the opponent draws 25 cards",Legendary,Draw25SO,Coded
+3.5 inch Floppy Disk,3/4,Any,,"Can be played as either a 3 or a 4. Always counts as blue. If you activated a side card this turn, mult by 1.25",Common,FloppyDiscSO,Coded
+99 card,Any,Red,99,Gain 99 points,Common,_99CardSO,Coded
+Ante Up,Any,Red,,"When played, multiply the Ante of the Round by 1.5",Rare,AnteUpSO,Coded
+Art Theft,Any,Any,,"Whenever you play a card that shares a color with this card, multipy this card's points by 1.25 this round",Uncommon,ArtTheftSO,Coded
+Balanced Card,Any,Green,,Can only be played if your opponent has less cards than you. They draw up to the difference,Uncommon,BalancedSO,Coded
+Burglary,Any,Orange,,"When played, steal gold from the opponent equal to card value",Uncommon,BurglarySO,Coded
+Take 5,Any,Green,,Your opponent draws 5 cards,Rare,CardDrawSO,Coded
+Card Squared,Any,Red,,Multiply the final score value of this card by it's original value,Uncommon,CardSquaredSO,Coded
+Comedy Comes in 3s,Any,Red,,Next card you play gives triple value,Uncommon,ComedySO,Coded
+X of Cups,Any,Blue,,"When drawn, smoke 1 random card in the opponent's deck",Common,CupsSO,Coded
+Smoke Bomb,Any,Blue,,"When played, smokes 5 random cards in your opponent's deck",Common,DeckSmokePlaySO,Coded
+Devil's Advocate,Any,Orange,,Gain 666 points. Lose all your money.,Rare,DevilsAdvocateSO,Coded
+Dollar Bill,Any,Orange,,"When played, gain 3 money",Common,DollarBillSO,Coded
+The Dynamo,Any,Red,,"When in the hand and you play another red card, gain 10 points permanently",Common,DynamoCardSO,Coded
+Early Bird,Any,Orange,,"When you play this card, if this is the first card on the pile, gain 5 money",Common,EarlyBirdSO,Coded
+Emerald card,Any,Green,,Gives 5x the point value,Rare,ExpensiveCardSO,Coded
+Jasper card,Any,Orange,,Gives 5x the point value,Rare,ExpensiveCardSO,Coded
+Ruby card,Any,Red,,Gives 5x the point value,Rare,ExpensiveCardSO,Coded
+Sapphire card,Any,Blue,,Gives 5x the point value,Rare,ExpensiveCardSO,Coded
+Shared Account,Any,Orange,,Gives money equal to the total money of both players x5,Rare,ExpensiveCardSO,Coded
+Explosive Gains,Any,Red,,"Whenever you play another smoked card, if this card is in your hand, gain 50 points",Uncommon,ExplosiveSO,Coded
+Fair Market Price,Any,Orange,,"When played, give your opponent a random card from your deck. Take 5 money from them",Common,FairMarketSO,Coded
+Fast and Furious,Any,Red,,"Whenever you play a card, if this card is in your hand, add 10 points to it this round",Common,FastAndFuriousSO,Coded
+Final Word,Any,Green,,"If this card ends the round, gain 10 money",Uncommon,FinalWordSO,Coded
+Fixer Upper card,Any,Green,,"Every time you play a card, while this card is in your deck, it gains 10 points permanently",Common,FixerUpperSO,Coded
+Fix it in post,Any,Any,,"When drawn, choose a random color that's not on this card and add it to this card",Common,FixItSO,Coded
+Flashbang,Any,Blue,,"When you draw this card, your opponent smokes 2 cards of their choice in their hand",Common,FlashbangSO,Coded
+Ghost Pepper,Any,Red,,"If a smoked card is played, play this card on top of it. It gives x2 points",Common,GhostPepperSO,Coded
+Grapeshot,Any,Red,,"Whenever you play another card, if this card is in your hand, multiply it's value by 1.5 this round",Uncommon,GrapeshotSO,Coded
+Green Energy,Any,Green,,"Whenever you recycle this card, it gains 40 points",Common,GreenEnergySO,Coded
+Hand of Midas,Any,Orange,,"When played, choose 1 card in your hand to change Orange. You gain 4 money",Common,HandOfMidasSO,Coded
+Factory Card,Any,Blue,,"When played, smoke 3 random cards in your opponent's hand",Uncommon,HandSmokeCardSO,Coded
+Harvest,Any,Green,,"Whenever you buy a card to your deck, this card gains 20 points",Common,HarvestSO,Coded
+Hedge Funding,Any,Green,,"When played, recycle up to 3 cards in your hand. If they're smoked, clean them",Uncommon,HedgeSO,Coded
+Hitchhiker,Any,Green,,"When you play another green card, play this card on top of it right away",Common,HitchhikerSO,Coded
+Hors D'oeuvre,Any,Orange,,"Whenever the shop is refreshed, this card gains 15 points",Uncommon,HoDurvesSO,Coded
+Incense,Any,Blue,,"When you play this card, you can play a smoked card on top of it",Common,IncenseSO,Coded
+Land Tax,Any,Blue,,"When played, smoke up to 3 cards in your hand. For each card smoked, take 3 money from your opponent",Uncommon,LandTaxSO,Coded
+Light Pollution,Any,Blue,,"When played, clean a card in your hand and smoke a random card in your opponent's hand and deck",Common,LightPollutionSO,Coded
+Liquidation Sale,Any,Orange,,"Whenever you remove a card from your deck, this card gains 20 points",Common,LiquidationSO,Coded
+Lucky 7,Any,Orange,,"When you play this card, gain score equal to your money * 10",Uncommon,LuckySevenSO,Coded
+Magpie card,Any,Green,,"When played, fetch a card from your deck to your hand",Rare,MagpieSO,Coded
+Middleman arrangement,Any,Orange,,"Whenever you activate a side card effect, gain 3 money",Uncommon,MiddlemanSO,Coded
+Miner Card,Any,Green,,"When you activate a side card effect, this card gains 50 points for this round",Uncommon,MinerCardSO,Coded
+The Nail,Any,Red,,"Every time played, increase value by 2 (Carries to next games, loops)",Common,NailCardSO,Coded
+NFT card,Any,Orange,,"When played, gives your money x2 as points. Half your money",Common,NFTCardSO,Coded
+Painter's Card,Any,Wild,,"When another card is played, copy its color(s)",Common,PainterCardSO,Coded
+Patchwork,Any,Any,,"When you play another card, becomes a copy of that card for this round",Rare,PatchworkSO,Coded
+X of Pentacles,Any,Orange,,"Gives 1 money when played, Score is equal to half money",Common,PentacleSO,Coded
+Perfume Card,Any,Blue,,"Starts each round smoked. When cleaned, multiply it's value by 2 this round.",Common,PerfumeSO,Coded
+Piledriver,Any,Red,,This card gives 10 points * the amount of cards in the pile,Uncommon,PileDriverSO,Coded
+Pool's Closed,Any,Blue,,"When you play this card, it gives 40 points for each smoked card in your hand",Rare,PoolClosedSO,Coded
+Post-it Note,Any,Red,,"Whenever another card is played, if this card is in your hand, it gains that card's value as points for this round",Common,PostItNoteSO,Coded
+Prism Card,Any,Wild,,Always counts as all colors,Common,PrismCardSO,Coded
+Queue Card,Any,Any,,"When played, puts the bottom card of the pile on top",Uncommon,QueueCardSO,Coded
+Rain Forecast,Any,Blue,,"When this card is in your hand, gain 2 money each time you clean a card",Uncommon,RainForecastSO,Coded
+Randomizer Card,Any,Any,,"When played, turns a random card in the opponent's hand into a normal card with a random value/color",Uncommon,RandomizerSO,Coded
+Reckless Spending,Any,Orange,,"Whenever you spend money, this card gains 10 points",Rare,RecklessSpendingSO,Coded
+Special Gavel,Any,Green,x2,"When played, recycle all cards in your hand",Uncommon,RecycleCardSO,Coded
+Refreshments,Any,Green,,"When you recycle this card, refresh one of your used side cards",Common,RecyclingSO,Coded
+Sauna,Any,Blue,,"Whenever a card is smoked, this card's value is multiplied by 1.1 if it's in the hand",Uncommon,SaunaSO,Coded
+Seeing Double,Any,Red,,The next card you play is triggered again,Rare,SharedAccountSO,Coded
+Short Squeeze,Any,Orange,,Card score equal to money your opponent has * 10,Common,ShortSqueezeSO,Coded
+Shrapnal Bomb,Any,Blue,,"When played, smoke your opponent's entire hand, then recycle it",Rare,ShrapnalBombSO,Coded
+Skipper Card,Any,Green,,"When a card is played, if it didn't share a color with this card, it jumps to the top of the pile",Uncommon,SkipperSO,Coded
+Slow and Steady,Any,Red,,"Whenever you score, add 5 points to this card",Uncommon,SlowSteadySO,Coded
+Steamer card,Any,Blue,,"When played, choose and clean up to 2 smoked cards in your hand for the round",Common,SteamerSO,Coded
+Stock Certificate,Any,Orange,,"When played, draw 1 card and gain money equal to 2x its value",Uncommon,StockCertificateSO,Coded
+Surf's Up!,Any,Blue,,"Whenever you clean a card in your hand, this card permanently gains 15 points",Uncommon,SurfUpSO,Coded
+Sweet Memories,Any,Green,,"When you play this card, refresh all side cards you used already",Rare,SweetMemoriesSO,Coded
+Switcharoo card,Any,Wild,,"When drawn, shuffles itself into the opponent's deck and you draw the top card of their deck instead.",Uncommon,SwitcharooSO,Coded
+X of Swords,Any,Red,,Gain x1.25 point value,Common,SwordsSO,Coded
+Throwback,Any,Green,,"When played, pick a card out of 4 random cards in the pile and add a copy of it to your hand",Common,ThrowbackSO,Coded
+Trade Offer Card,Any,Orange,,"When played, you may give your opponent a card from your hand, and recieve 1 random card",Uncommon,TradeOfferCard,Coded
+X of Wands,Any,Green,,"When played, recycle 1 card",Common,WandsSO,Coded
+Water Balloon,Any,Blue,,"When played, smoke a random card in your opponent's deck for each blue card in the pile",Uncommon,WaterBaloonSO,Coded
+Wire Tap,Any,Red,,"Whenever you activate a side card effect, gain 30 points",Rare,WireTapSO,Coded
+Choose-Your-Own-Adventure book,Wild,Wild,,"When played, choose a color.
+
+Blue - Smoke 2 random cards in your opponent's hand
+Red - Gain x2 points
+Green - Play another card on top of this card
+Orange - Gain value x2 money",Uncommon,AdventureSO,Coded
+Calling Card,Wild,Red,,"When played, if this card is smoked, gain 200 points",Common,CallingCardSO,Coded
+Car Wash,Wild,Blue,,"When played, clean all smoked cards in your deck",Common,CarWashSO,Coded
+Color Change card,Wild,Wild,,"When played, changes the pile to any color you want",Common,ChangeColorCardSO,SO Created
+Copycat Card,Wild,Any,,"When another card is played, copy its number",Common,CopycatCardSO,SO Created
+Draw 2 card,Wild,Any,,"Makes the opponent draw 2 cards, unless reacted to",Common,Draw2CardSO,SO Created
+Glitched Card,Wild,Wild,,"Every time another card is played, randomize card/color",Common,GlitchedCardSO,Coded
+Hostile Takeover,Wild,Orange,,"When this card is played, double your money. It's value is equal to your money * 10",Legendary,HostileTakeoverSO,Coded
+Joker Card,Wild,Wild,100,Doesn't count as the top card,Common,JokerSO,Coded
+Kill the Tower,Wild,Wild,20,"When played, multiply point value by 1.1 per card in the pile",Uncommon,KillTowerSO,Coded
+"Live fast, Die young",Wild,Red,50,"Whenever you play this card, double it's point value.",Legendary,LiveFastSO,Coded
+Looting Card,Wild,Wild,,"When played, both players recycle 1 card",Common,LootingCardSO,Coded
+Magic Trick,Wild,Wild,,"When played, choose a card in your opponent's deck. Give them a random card from your hand and take their card to yours",Rare,MagicTrickSO,Coded
+"Mau, the Prohibited One",Wild,Wild,,"At end of round, gain an effect based on card position:
+In Hand - Next Round, start with 1 less card
+In Deck - gain 20 money
+In Pile - Gain 200 points 
+Smoked - Your opponent next game starts with a smoked hand
+
+At the start of turn, if this is the last card in your hand, you win the game",Mythical,MauSO,Coded
+No u card,Wild,Blue,,"If this card gets smoked because of an opponent's effect, instead they smoke their entire hand",Rare,NoUSO,Coded
+Plus Card,Wild,Green,,"When played, allows you to play another viable card on top of it. It doesn't trigger effects or scores",Common,PlusSO,Coded
+Roulette machine,Wild,Any,,"When played, choose a number. If your opponent plays a card of that value right after, double your points",Rare,RouletteSO,Coded
+Rush Job,Wild,Green,,"When played, play 3 more cards from your hand. They're all wild.",Legendary,RushJobSO,Coded
+"Where there's smoke, there's fire",Wild,Blue,10,"Whenever you draw a smoked card, multiply this card's value by 1.25 * amount of cards",Legendary,SmokeFireSO,Coded
+Cigar,Wild,Wild,10,"When played, smokes a random card in the opponent's card",Common,SmokerSO,Coded
+Surprise card!,Wild,Wild,,Value and color chosen at random on play!,Uncommon,SurpriseCardSO,Coded
+X card,Wild,Any,,"When played, choose value for the card",Common,XCardSO,Coded

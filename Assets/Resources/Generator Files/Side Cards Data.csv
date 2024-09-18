@@ -1,0 +1,81 @@
+Name,Effect,Rarity,Process,SO
+AI Generated Card,Copies the effect of the Side Card below this card,Rare,Coded,AICardSO
+Ash Tray,Get 150 points for each Smoked card you play,Uncommon,Coded,AshTraySO
+Recycling Bin,"Every time you recycle a card, gain 30 points",Common,Coded,BinSO
+Blood Donor's card,"Whenever you play a red card, gain 2 money",Uncommon,Coded,BloodDonorSO
+Blorbo,Activate: Add a card from your deck to your hand. Draw 1 extra card,Common,Coded,BlorboSO
+Booster Pack,Activate: Remove this card. Choose 1 of 4 random cards to add to your hand.,Common,Coded,BoosterPackSO
+Bribe Envelope,Activate: Draw 2 cards. Gain 6 money. Once per round,Rare,Coded,BribeSO
+Certificate of Authenticity,"Whenever you play a regular card with nothing on it, you can play a second card on top of it. It doesn't trigger",Rare,Coded,CertificateSO
+VII - The Chariot,"At the end of each turn, Clean one card of your choice in your hand",Uncommon,Coded,ChariotSO
+Blue Paintbrush,All played cards count as blue cards,Uncommon,Coded,ColorAddSO
+Green Paintbrush,All played cards count as green cards,Uncommon,Coded,ColorAddSO
+Orange Paintbrush,All played cards count as orange cards,Uncommon,Coded,ColorAddSO
+Red Paintbrush,All played cards count as red cards,Uncommon,Coded,ColorAddSO
+Blue Credit,"When a Blue card is played, gain 30 points",Common,Coded,ColorScoreAdderSO
+Green Visa,"When a Green card is played, gain 30 points",Common,Coded,ColorScoreAdderSO
+Yellow Page,"When a Orange card is played, gain 30 points",Common,Coded,ColorScoreAdderSO
+Red Card,"When a Red card is played, gain 30 points",Common,Coded,ColorScoreAdderSO
+XIII - Death,"When you would lose a round, you survive. This card is then removed from your Side Deck",Legendary,Coded,DeathSO
+XV - The Devil,Gain 3 money each time you can't play a card on your turn,Common,Coded,DevilSO
+III - The Empress,"All drawn cards gain an additional, random color",Common,Coded,EmperorSO
+IV - The Emperor,Activate: Choose 3 cards in your hand. They become full wilds,Uncommon,Coded,EmperorSO
+Empty Canvas,"each time you play a card, if its color wasn't played yet, fill this card with that color. Once all four colors were played, all cards you play are color wild cards",Rare,Coded,EmptyCanvasSO
+Event Ticket,Activate: Add 1 random rare card to your hand for this round,Uncommon,Coded,EventTicketSO
+0 - The Fool,Start each round with 100 extra points. You draw 1 less card,Common,Coded,FoolSO
+Four Eyes,"The first time you activate a card effect each round, refresh that card",Rare,Coded,FourEyesSO
+Gift card,"On end of round: If you won, add 1 Side Deck slot and destroy this card",Rare,Coded,GiftCardSO
+Greed Card,"Whenever you draw a card, gain 30 points",Common,Coded,GreedSO
+XII - The Hanged Man,You gain 75 points for leftover card in your hand at end of round,Uncommon,Coded,HangedManSO
+V - The Heirophant,"Every time you play a card with no effects or triggers, it gains a permanent 25 points",Common,Coded,HeirophantSO
+IX - The Hermit,Double the point value of your card if it has no corresponding qualities with the current card,Common,Coded,HermitSO
+Hoarder's Card,"Whenever you draw, gain 10 points per card",Uncommon,Coded,HoarderSO
+Hue Picker,"At start of round, choose a color. The first hand you draw changes all cards to this color",Uncommon,Coded,HuePickerSO
+ID card,"When picked, choose a color. Cards played of the color of your choice give 1.5x points",Common,Coded,IDCard
+Imaginary Number,1s count as value wilds,Uncommon,Coded,ImaginarySO
+XX - Judgement,"Whenever your opponent smokes a card of yours, they also smoke 2 random cards",Rare,Coded,JudgementSO
+VIII - Justice,"Whenever the opponent's card smokes a card of yours, they draw 1 card",Uncommon,Coded,JusticeSO
+Last Stand,"If you have only 1 card in your hand and no cards in deck, you win the match. This card then destroys itself",Rare,Coded,LastStandSO
+Library card,Activate: Recycle up to 4 cards.,Common,Coded,LibraryCardSO
+VI - The Lovers,Triple the point value of your card's original color and value are exactly the same as the current card on the pile,Common,Coded,LoversSO
+Machine Printed Card,Copies the effect of the Side Card above this card,Rare,Coded,MachineCardSO
+I - The Magician,"At the start of your turn, transform a random card in any player's hand to an entirely random card",Common,Coded,MagicianSO
+Member's card,"When picked, choose a number. When you play a card of that number, double its score",Common,Coded,MembersCardSO
+Metronome,"At the end of round, gain points equal to turns times 10x",Common,Coded,MetronomeSO
+Mirage,Activate: Multiply the next card's score by 1.5,Common,Coded,MirageSO
+Monopoly Money,On end of round: Add your money * 10 to your score,Common,Coded,MonopolySO
+XVIII - The Moon,"Whenever you draw a smoked card, clean it.",Common,Coded,MoonSO
+Mulligan Card,"At the start of your turn, recycle up to 2 cards",Common,Coded,MulliganCardSO
+Paycheck,"When you start the round, gain money equal to the cards in your hand",Common,Coded,PaycheckSO
+II - High Priestess,You can see the order of your cards when viewing the deck,Uncommon,Coded,PriestessSO
+Prime Real Estate,"Prime cards (1, 2, 3, 5, 7) give triple points",Uncommon,Coded,PrimeSO
+Punch Card,"Whenever you play a card, if all your Side cards besides this one were activated cards that you already used, triple its score",Uncommon,Coded,PunchCardSO
+Refresh Button,First refresh in the shop is free,Common,Coded,RefreshVoucherSO
+Removal Voucher,"When you enter the shop, first removal is free",Common,Coded,RemoveVoucherSO
+Report Card,"At the end of round, if you have more score than your opponent before the ante is given, gain 15 money",Rare,Coded,ReportCardSO
+Rewards Card,Doubles all card points,Legendary,Coded,RewardsCardSO
+Rules card,Out of option draws draw 1 more card,Rare,Coded,RulesCardSO
+Saboutage,"When you start the round, smoke 8 random cards in your opponent's deck",Uncommon,Coded,SaboutageSO
+Seven Ate Nine,"Whenever you remove a value card from your deck, this card gains a 1.1 mult for all your cards",Rare,Coded,SevenAteSO
+Sleeved Card,Start each around with 1 less card,Common,SO Created,SleeveCardSO
+Unsleeved Card,Start each round with 1 more card,Common,SO Created,SleeveCardSO
+Sneak,Your opponents start with 1 more card,Common,Coded,SneakSO
+Speedrun Timer,"At end of round, gain 1000 points. This amount is decreased by 100 every turn, minimum 0",Uncommon,Coded,SpeedrunSO
+Split Second,"The first time you play a 2 during your turn, refresh a random activated side card",Rare,Coded,SplitSecondSO
+XVII - The Star,"Activate: Draw 1 card. If it can be played, play it immidiatly and continue your turn",Uncommon,Coded,StarSO
+Strategy Guide,"Whenever you activate a side card effect, recycle up to 4 cards",Rare,Coded,StrategySO
+XI - Strength,"Whenever you recycle a smoked card, clean it.",Uncommon,Coded,StrengthSO
+XIX - The Sun,"On round end, gain 2 money for card leftover in your hand",Uncommon,Coded,SunSO
+XIV - Temperance,"When you finish a round, if you didn't activate any side card effects this round, gain 10 money",Uncommon,Coded,TemperanceSO
+XVI - The Tower,"When your opponent smokes cards, gain 50 points",Common,Coded,TowerSO
+Trading Binder,Activate: Remove a card from your hand and add a card out of 10 to your hand instead. Only once per round,Legendary,Coded,TradingBinderSO
+Trash Compactor,"When you remove a card from your deck, cards you play gain 5 more points",Uncommon,Coded,TrashCompactorSO
+Triple 7s,"Whenever you play a 7, gain 7 money",Rare,Coded,Triple7SO
+Snake Eyes,All cards in your hand count as 1s,Common,SO Created,ValueAdderCardSO
+Game Voucher,First card in the shop is free. Only on entry,Common,Coded,VoucherSO
+Wallet,"Whenever you gain money, gain that much score",Common,Coded,WalletSO
+X - Wheel of Fortune,Activate: Add score equal to rand 1-9 * 20,Common,Coded,WheelFortuneSO
+I want to get off Mr. Mau's wild ride,"For each card you played this round, multiply the score of the next card by 1.2, culmulatively",Legendary,Coded,WildRideSO
+Wombo Combo,"Whenever you play a card, gain 10 points for each turn that passed",Common,Coded,WomboComboSO
+XXI - The World,"If you finish your hand, triple the round score ante",Legendary,Coded,WorldSO
+Yard Sale,"Every time you sell a Side Card, make a random hand card in the shop free",Uncommon,Coded,YardSaleSO

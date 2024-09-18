@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8acdf9a6d33cc604b9ebff772af699fa, type: 3}
+  m_Name: Mau, the Prohibited One
+  m_EditorClassIdentifier: 
+  Name: Mau, the Prohibited One
+  CardFront: {fileID: 21300000, guid: bff741c8815495a419bedda16b5bad7a, type: 3}
+  CardBack: {fileID: 21300000, guid: 1498d64a3e27de546970014cc29eb959, type: 3}
+  Description: "At end of round, gain an effect based on card position:\nIn Hand
+    - Next Round, start with 1 less card\nIn Deck - gain 20 money\nIn Pile - Gain
+    200 points \nSmoked - Your opponent next game starts with a smoked hand\nAt the
+    start of turn, if this is the last card in your hand, you win the game"
+  AIStrategyType: 07000000
+  AIChoice: 0
+  AIAffectsSelf: 0
+  ScoreAmount: 500
+  MultAmount: 0
+  ChoiceAmount: 0
+  MoneyAmount: 20
+  NumberAmount: 1
+  Rarity: 4
+  cardColors: 05000000
+  cardValues: 
+  PreWild: 1
+  PostWild: 1

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcaea73659488d547b3c12b794555f1e, type: 3}
+  m_Name: EnemyAssetManager
+  m_EditorClassIdentifier: 
+  EnemyDecks:
+    keys: 05000000010000000200000006000000080000000300000004000000
+    values:
+    - {fileID: 11400000, guid: 1938b7ad526d7ae4886ab10297331643, type: 2}
+    - {fileID: 11400000, guid: f68a507efbbe5394c9cc1c6a25640cb2, type: 2}
+    - {fileID: 11400000, guid: 7feecfa84a87d44439712b5686e0568e, type: 2}
+    - {fileID: 11400000, guid: 907108ca83f5a004a84584a602ec0831, type: 2}
+    - {fileID: 11400000, guid: f3baefe6d27f40c4ba178886bfe84699, type: 2}
+    - {fileID: 11400000, guid: 38a335cb3f36fa64ea350a9ecb130abb, type: 2}
+    - {fileID: 11400000, guid: f69df794f313a1b48b6eacc20cb3c944, type: 2}
+  EnemyValuationStats:
+    keys: 030000000000000001000000040000000500000002000000
+    values:
+    - {fileID: 11400000, guid: 8b007d25d59fc3948a2ee225f60312f1, type: 2}
+    - {fileID: 11400000, guid: ef4aa2c3fdcd8934ba53cb3023d71159, type: 2}
+    - {fileID: 11400000, guid: a4c9dd00f7409bd408966a5949dc6f1a, type: 2}
+    - {fileID: 11400000, guid: 8b007d25d59fc3948a2ee225f60312f1, type: 2}
+    - {fileID: 11400000, guid: 9b1f8d6bd2b5d0140b204dc07ecb89d8, type: 2}
+    - {fileID: 11400000, guid: d851c405b0a041c4ab41d298cdb3a3d7, type: 2}

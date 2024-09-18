@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69f8a0cd636e09048a831a9dd9625e44, type: 3}
+  m_Name: BaseData
+  m_EditorClassIdentifier: 
+  playerData:
+    StartHandSize: 5
+    MaxSideCards: 4
+    PlayerMoney: 10
+    CardsPlayed: 0
+    OutOfOptionsDrawAmount: 1
+    CardsRecycled: 0
+    TotalScore: 0
+    RoundNum: 0
+  shopData:
+    TimesBoughtHand: 0
+    TimesBoughtSide: 0
+    TimesRefreshedShop: 0
+    TimesRemoved: 0
+    TimesSoldSide: 0
+    RefreshCostStart: 0
+    RemoveCostStart: 0
+    AddSideCardSpaceCostStart: 30
+  rarityChanceData:
+    CommonWeight: 10
+    UncommonWeight: 5
+    RareWeight: 1
+    MythicWeight: 0.1

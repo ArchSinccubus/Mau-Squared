@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ed9250f7fb8614eae65f86ed1d8c7d, type: 3}
+  m_Name: AverageEvalStats
+  m_EditorClassIdentifier: 
+  stats:
+    ColorValue: 0.5
+    NoColorValue: 0.3
+    RarityMult: 0.4
+    CardValueValue: 0.1
+    StrategyMult: 3
+    NoStrategyMult: 0.3
+    CutoffValue: 0.4
+    SideCardChanceStrat: 0.75
+    SideCardChanceNoStrat: 0.5

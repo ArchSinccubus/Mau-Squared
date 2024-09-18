@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2faeeb335bfbaa45b37e92776c09024, type: 3}
+  m_Name: Visual Asset Manager
+  m_EditorClassIdentifier: 
+  TempBackTest: {fileID: 2800000, guid: a133804a85f2e4c4eaf1d8b1b8d8c551, type: 3}
+  CardBacks:
+    keys: []
+    values: []
+  Cards:
+    keys: []
+    values: []

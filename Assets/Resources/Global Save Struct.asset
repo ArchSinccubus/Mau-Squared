@@ -1,0 +1,211 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ddda87fd559d748a8f01d5510f3bba, type: 3}
+  m_Name: Global Save Struct
+  m_EditorClassIdentifier: 
+  UnlockedHandCards:
+    keys:
+    - 99 card
+    - Ante Up
+    - Art Theft
+    - Balanced Card
+    - Black Cat Card
+    - Burglary
+    - Calling Card
+    - Car Wash
+    - Card Squared
+    - Cardio
+    - Choose-Your-Own-Adventure book
+    - Cigar
+    - Color Change card
+    - Comedy Comes in 3s
+    - Copycat Card
+    - Devils Advocate
+    - Dollar Bill
+    - Draw 2 card
+    - Draw 25 card
+    - Early Bird
+    - Emerald card
+    - Explosive Gains
+    - Factory Card
+    - Fair Market Price
+    - Fast and Furious
+    - Final Word
+    - Fix it in post
+    - Fixer Upper card
+    - Flashbang
+    - Flashcard
+    - Fog Forecast
+    - Ghost Pepper
+    - Glitched Card
+    - Grapeshot
+    - Green Energy
+    - Hand of Midas
+    - Harvest
+    - Hedge Funding
+    - Hitchhiker
+    - Hors Doeuvre
+    - Hostile Takeover
+    - Incense
+    - Jasper card
+    - Joker Card
+    - Kill the Tower
+    - Land Tax
+    - Light Pollution
+    - Liquidation Sale
+    - Live fast, Die young
+    - Looting Card
+    - Lucky 7
+    - Magpie card
+    - Middleman arrangement
+    - Miner Card
+    - Mutually Assured Destruction
+    - NFT card
+    - No u card
+    - Painters Card
+    - Patchwork
+    - Perfume Card
+    - Piledriver
+    - Plus Card
+    - Pools Closed
+    - Post-it Note
+    - Prism Card
+    - Queue Card
+    - Reckless Spending
+    - Refreshments
+    - Roulette machine
+    - Ruby card
+    - Rush Job
+    - Sapphire card
+    - Sauna
+    - Cardigan
+    - Shared Account
+    - Short Squeeze
+    - Shrapnal Bomb
+    - Slow and Steady
+    - Smoke Bomb
+    - Special Gavel
+    - Steamer card
+    - Stock Certificate
+    - Straightjacket 8
+    - Cardinal
+    - Surfs Up!
+    - Surprise card!
+    - Sweet Memories
+    - Take 5
+    - The Dynamo
+    - The Nail
+    - Throwback
+    - Trade Offer Card
+    - Water Balloon
+    - Where theres smoke, theres fire
+    - Wire Tap
+    - X card
+    - X of Cups
+    - X of Pentacles
+    - X of Swords
+    - X of Wands
+    - Right Gottem of the Prohibited One
+    - Left Furry Glove of the Prohibited One
+    - Left Crocks of the Prohibited One
+    - Right Socks with Sandles of the Prohibited One
+    - Mau, the Prohibited One
+    values: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+  UnlockedSideCards:
+    keys:
+    - 0 - The Fool
+    - AI Generated Card
+    - Ash Tray
+    - Blood Donors card
+    - Blorbo
+    - Blue Credit
+    - Blue Paintbrush
+    - Booster Pack
+    - Bribe Envelope
+    - Certificate of Authenticity
+    - Empty Canvas
+    - Even Split
+    - Event Ticket
+    - Four Eyes
+    - Game Voucher
+    - Gift card
+    - Greed Card
+    - Green Paintbrush
+    - Green Visa
+    - Hoarders Card
+    - Hue Picker
+    - I - The Magician
+    - I want to get off Mr. Maus wild ride
+    - ID card
+    - II - High Priestess
+    - III - The Empress
+    - Imaginary Number
+    - IV - The Emperor
+    - IX - The Hermit
+    - Library card
+    - Machine Printed Card
+    - Members card
+    - Metronome
+    - Mirage
+    - Monopoly Money
+    - Mulligan Card
+    - Orange Paintbrush
+    - Papayrus Card
+    - Paycheck
+    - Prime Real Estate
+    - Punch Card
+    - Recycling Bin
+    - Red Card
+    - Red Paintbrush
+    - Refresh Voucher
+    - Removal Voucher
+    - Report Card
+    - Rewards Card
+    - Rules card
+    - Saboutage
+    - Seven Ate Nine
+    - Sleeved Card
+    - Snake Eyes
+    - Sneak
+    - Speedrun Timer
+    - Split Second
+    - Strategy Guide
+    - Trading Binder
+    - Trash Compactor
+    - Triple 7s
+    - Unsleeved Card
+    - V - The Heirophant
+    - VI - The Lovers
+    - VII - The Chariot
+    - VIII - Justice
+    - Wallet
+    - X - Wheel of Fortune
+    - XI - Strength
+    - XII - The Hanged Man
+    - XIII - Death
+    - XIV - Temperance
+    - XIX - The Sun
+    - XV - The Devil
+    - XVI - The Tower
+    - XVII - The Star
+    - XVIII - The Moon
+    - XX - Judgement
+    - XXI - The World
+    - Yard Sale
+    - Sim Chip
+    values: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+  StratCount:
+    keys: 000000000100000002000000030000000400000005000000060000000700000008000000
+    values: 000000000000000000000000000000000000000000000000000000000000000000000000
+  ColorCount:
+    keys: 00000000010000000200000003000000
+    values: 00000000000000000000000000000000

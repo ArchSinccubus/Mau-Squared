@@ -1,0 +1,298 @@
+{
+   "0 - The Fool": {
+      "Text": "Start each round with +{} points",
+      "Trigger": "+{}!"
+   },
+   "I - The Magician": {
+      "Text": "Activate: Smoke up to c{} cards in your hand. For each, gain +{} points",
+      "ChoiceText": "Choose cards to smoke",
+      "Activate": "+{}!"
+   },
+   "II - High Priestess": {
+      "Text": "You can see the order of your cards when viewing the deck"
+   },
+   "III - The Empress": {
+      "Text": "When you draw a card, they each gain a temporary random color"
+   },
+   "IV - The Emperor": {
+      "Text": "Activate: Choose up to c{} cards in your hand. They become temporary wilds",
+      "ChoiceText": "Choose cards to upgrade",
+      "Activate": "Wild!"
+   },
+   "IX - The Hermit": {
+      "Text": "Whenever you play a card, if it shares no qualities with the top card, it gains temporary x{} mult",
+      "Trigger": "x{}!"
+   },
+   "V - The Heirophant": {
+      "Text": "Whenever you play a vanilla card, it gains +{} points and x{} mult"
+   },
+   "VI - The Lovers": {
+      "Text": "Whenever you play a card, if it shares all colors and values with the top card, it gains temporary x{} mult",
+      "Trigger": "x{}!"
+   },
+   "VII - The Chariot": {
+      "Text": "At the end of your turns, Clean up c{} card in your hand",
+      "ChoiceText": "Choose cards to clean"
+   },
+   "VIII - Justice": {
+      "Text": "Whenever your opponent Smokes a card of yours, they draw n{} card",
+      "Trigger": "Punished!"
+   },
+   "X - Wheel of Fortune": {
+      "Text": "Activate: Gain +{} score",
+      "Trigger": "+{}!"
+   },
+   "XI - Strength": {
+      "Text": "Whenever you recycle a Smoked card, Clean it",
+      "Trigger": "Cleaned!"
+   },
+   "XII - The Hanged Man": {
+      "Text": "When the round ends, gain +{} points for each card in your hand",
+      "Trigger": "+{}!"
+   },
+   "XIII - Death": {
+      "Text": "If you would lose a round, instead remove this card from your Side Deck. You gain no money this round",
+      "Trigger": "Rebirth!"
+   },
+   "XIV - Temperance": {
+      "Text": "When the round ends, if no Side Card was Acticated, gain m{} money",
+      "Trigger": "m{}$!"
+   },
+   "XIX - The Sun": {
+      "Text": "When the round ends, gain m{} money for each card in your hand",
+      "Trigger": "m{}$!"
+   },
+   "XV - The Devil": {
+      "Text": "Whenever you can't play a card on your turn, gain m{} money",
+      "Trigger": "m{}$!"
+   },
+   "XVI - The Tower": {
+      "Text": "Whenever you Smoke cards, gain +{} points for each card Smoked",
+      "Trigger": "+{}!"
+   },
+   "XVII - The Star": {
+      "Text": "Activate: Draw n{} card. If it can be played, Combo it and continue your turn"
+   },
+   "XVIII - The Moon": {
+      "Text": "Whenever you draw a Smoked card, Clean it",
+      "Trigger": "Clean!"
+   },
+   "XX - Judgement": {
+      "Text": "Whenever your opponent Smokes a card of yours, they Smoke n{} random hand cards",
+      "Trigger": "Punished!"
+   },
+   "XXI - The World": {
+      "Text": "If you ended the round, you gain x{} score Ante",
+      "Trigger": "x{}!"
+   },
+   "Greed Card": {
+      "Text": "Whenever you draw a card, gain +{} points",
+      "Trigger": "+{}!"
+   },
+   "Hoarder's Card": {
+      "Text": "Whenever you draw a card, gain +{} per card drawn",
+      "Trigger": "+{}!"
+   },
+   "AI Generated Card": {
+      "Text": "When round starts, becomes a copy of the card below it"
+   },
+   "Ash Tray": {
+      "Text": "Whenever you play a Smoked card, gain +{} points",
+      "Trigger": "+{}!"
+   },
+   "Blood Donor's card": {
+      "Text": "Whenever you play a red card, gain m{} money",
+      "Trigger": "m{}$!"
+   },
+   "Blorbo": {
+      "Text": "Activate: Add a card from your deck to your hand. Draw n{} card",
+      "Activate": "Draw n{}!"
+   },
+   "Blue Credit": {
+      "Text": "Blue cards you play have +{} more points"
+   },
+   "Blue Paintbrush": {
+      "Text": "All cards you play count as blue cards"
+   },
+   "Booster Pack": {
+      "Text": "Activate: Remove this card. Choose c{} of n{} random cards. Add it to your hand.",
+      "ChoiceText": "Choose card to add",
+      "Activate": "Boosted!"
+   },
+   "Bribe Envelope": {
+      "Text": "Activate: Draw n{} cards. Gain m{} money.",
+      "Activate": "Bribed!"
+   },
+   "Certificate of Authenticity": {
+      "Text": "Whenever you play a vanilla card, you may Combo another card once.",
+      "Trigger": "Combo!"
+   },
+   "Empty Canvas": {
+      "Text": "Whenever you play a card, temporarily add its colors to this card. Once all four colors are filled, all cards you play are wild"
+   },
+   "Even Split": {
+      "Text": "Even cards you play have +{} more points"
+   },
+   "Event Ticket": {
+      "Text": "Activate: Temporarily add n{} random rare card to your had",
+      "Activate": "Rare!"
+   },
+   "Four Eyes": {
+      "Text": "Whenever you Activate a Side Card for the first time, Refresh it",
+      "Trigger": "Refreshed!"
+   },
+   "Gift card": {
+      "Text": "When round ends, if you won, Add n{} Side Card slot and remove this card"
+   },
+   "Green Paintbrush": {
+      "Text": "All cards you play count as green cards"
+   },
+   "Green Visa": {
+      "Text": "Green cards you play have +{} more points"
+   },
+   "Hue Picker": {
+      "Text": "When round starts, choose a color. Your opening cards are all temporarily that color",
+      "ChoiceText": "Choose a color"
+   },
+   "I want to get off Mr. Mau's wild ride": {
+      "Text": "Whenever you play a card, gain x{}.\nCards you play have x{} mult",
+      "Trigger": "x{}!"
+   },
+   "ID card": {
+      "Text": "When round starts, choose a temporary color. Cards of the chosen color have x{} mult",
+      "ChoiceText": "Choose a color"
+   },
+   "Imaginary Number": {
+      "Text": "1s you play are wild"
+   },
+   "Library card": {
+      "Text": "Activate: Recycle up to c{} cards",
+      "ChoiceText": "Choose cards to recyclle",
+      "Activate": "Recycled!"
+   },
+   "Machine Printed Card": {
+      "Text": "When round starts, becomes a copy of the card above it"
+   },
+   "Member's card": {
+      "Text": "When round starts, choose a temporary value. Cards of the chosen value have x{} mult",
+      "ChoiceText": "Choose a value"
+   },
+   "Metronome": {
+      "Text": "When round ends, gain +{} * turns passed points",
+      "Trigger": "+{}!"
+   },
+   "Mirage": {
+      "Text": "Activate: Next card you play has x{} mult",
+      "Activate": "Mirage!"
+   },
+   "Monopoly Money": {
+      "Text": "When round ends: Gain +{} * money points",
+      "Trigger": "+{}!"
+   },
+   "Mulligan Card": {
+      "Text": "When your turn starts, recycle up to c{} cards",
+      "ChoiceText": "Choose cards to recycle"
+   },
+   "Orange Paintbrush": {
+      "Text": "All cards you play count as orange cards"
+   },
+   "Papayrus Card": {
+      "Text": "When your turn starts, you may Smoke any number of cards in your hand and recycle them.\nWhenever you draw a Smoked card, Smoke a random opponent's deck card",
+      "ChoiceText": "Choose cards to smoke",
+      "Trigger": "Smoked!"
+   },
+   "Paycheck": {
+      "Text": "When round starts, gain money equal to your opening cards"
+   },
+   "Prime Real Estate": {
+      "Text": "Prime cards have x{} mult"
+   },
+   "Punch Card": {
+      "Text": "Cards you play have x{} mult for each Side Card you Activated"
+   },
+   "Recycling Bin": {
+      "Text": "Whenever you recycle a card, gain +{} points",
+      "Trigger": "+{}!"
+   },
+   "Red Card": {
+      "Text": "Red cards you play have +{} more points"
+   },
+   "Red Paintbrush": {
+      "Text": "All cards you play count as red cards"
+   },
+   "Refresh Voucher": {
+      "Text": "First Refresh in the shop is free"
+   },
+   "Removal Voucher": {
+      "Text": "First Removal in the shop is free"
+   },
+   "Report Card": {
+      "Text": "When round ends, before Ante score, if you have more points, gain m{} money",
+      "Trigger": "m{}$!"
+   },
+   "Rewards Card": {
+      "Text": "All cards you play have x{} mult"
+   },
+   "Rules card": {
+      "Text": "Whenever a player cannot play a card, they draw an extra card"
+   },
+   "Saboutage": {
+      "Text": "When round starts, Smoke 8 random opponent's deck cards",
+      "Trigger": "Smoked!"
+   },
+   "Seven Ate Nine": {
+      "Text": "Whenever you remove a value card, this card gains x{}.\nCards you play have x{} mult",
+      "Trigger": "x{}!"
+   },
+   "Sim Chip": {
+      "Text": "Orange cards you play have +{} more points"
+   },
+   "Sleeved Card": {
+      "Text": "Start each round with n{} less card"
+   },
+   "Snake Eyes": {
+      "Text": "Odd cards you play have x{} mult"
+   },
+   "Sneak": {
+      "Text": "Your opponent starts each round with n{} more card"
+   },
+   "Speedrun Timer": {
+      "Text": "When round ends, gain +{} points. That amount is decreased by n{} for each turn that passed (Minimum 0)",
+      "Trigger": "+{}!"
+   },
+   "Split Second": {
+      "Text": "The first time you play a n{} value card, Refresh a random Side Card"
+   },
+   "Strategy Guide": {
+      "Text": "Whenever you Activate a Side Card, you may recycle up to c{} cards",
+      "ChoiceText": "Choose cards to recycle",
+      "Trigger": "Recycled!"
+   },
+   "Trading Binder": {
+      "Text": "Activate: Remove a card from your hand. Choose 1 out of n{} cards to add to your hand instead",
+      "ChoiceText": "Choose a card to remove",
+      "Activate": "Traded!"
+   },
+   "Trash Compactor": {
+      "Text": "Whenever you remove a card, this card gains +{} points\nCards you play have +{} more points",
+      "Trigger": "+{}!"
+   },
+   "Triple 7s": {
+      "Text": "Whenever you play a 7, gain m{} money",
+      "Trigger": "m{}$!"
+   },
+   "Unsleeved Card": {
+      "Text": "Start each round with n{} more card"
+   },
+   "Wallet": {
+      "Text": "Whenever you gain money, gain that much score",
+      "Trigger": "m{}!"
+   },
+   "Yard Sale": {
+      "Text": "Whenever you sell a Side Card, a random card in the shop becomes free",
+      "Trigger": "Free!"
+   },
+   "Game Voucher": {
+      "Text": "First card in the shop is free. Only on entry."
+   }
+}

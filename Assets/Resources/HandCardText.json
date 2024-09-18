@@ -1,0 +1,407 @@
+{
+   "99 card": {
+      "Text": "When played, gain 99 points."
+   },
+   "Ante Up": {
+      "Text": "When played, multiply round Ante by x{}",
+      "Played": "Ante Up!"
+   },
+   "Art Theft": {
+      "Text": "When you play a color-sharing card, gain temporary x{} mult ",
+      "Trigger": "x{}!"
+   },
+   "Balanced Card": {
+      "Text": "When played, the player with less cards draws cards equal to the difference",
+      "Played": "Draw n{}!"
+   },
+   "Black Cat Card": {
+      "Text": "When played, Smoke all cards in your hand. This card's base score is equal the combined score of all other cards in your hand"
+   },
+   "Burglary": {
+      "Text": "When played, Steal money equal to this card's value"
+   },
+   "Calling Card": {
+      "Text": "When played, Smoke up to c{} cards in your hand. Recycle all chosen cards",
+      "ChoiceText": "Choose cards to Smoke",
+      "Played": "Smoked!"
+   },
+   "Car Wash": {
+      "Text": "When played, Clean all Smoked cards in your deck",
+      "Played": "Cleaned!"
+   },
+   "Card Squared": {
+      "Text": "This card gains multiplier equal to its base value."
+   },
+   "Cardigan": {
+      "Text": "When played, choose a card in your hand. It gains +{} points",
+      "Played": "+{}!"
+   },
+   "Cardinal": {
+      "Text": "Whenever you draw, if it was a non-red card, this card gains temporary +{} points"
+   },
+   "Cardio": {
+      "Text": "When played, Smoke up to c{} cards in your hand. Gain +{} points for each Smoked card",
+      "ChoiceText": "Choose cards to Smoke",
+      "Trigger": "+{}!"
+   },
+   "Choose-Your-Own-Adventure book": {
+    "Text": "When played, choose an option:\n\nB - Smoke n{} random opponent's cards\nR - This card gains temporary x{} mult\nG - Combo another card\nO - Gain money equal to cards in hand * m{}",
+    "ChoiceText": "Choose a card to Combo",
+	"B" : "Smoke n{} random opponent's cards",
+	"R" : "This card gains temporary x{} mult",
+	"G" : "Combo another card",
+	"O" : "Gain money equal to cards in hand * m{}",
+	"BaseChoice" : "Choose an adventure"
+  },
+   "Cigar": {
+      "Text": "When played, Smoke a random opponent's card",
+      "Played": "Smoked!"
+   },
+   "Color Change card": {
+      "Text": "When played, change pile color to a color of your choice.",
+      "ChoiceText": "Choose Color"
+   },
+   "Comedy Comes in 3s": {
+      "Text": "When played, you may choose a card in your hand. If it's a 3, it gains x{} mult. If not, it gains temporary x{} mult",
+      "ChoiceText": "Choose card to upgrade",
+      "Trigger": "x{}!"
+   },
+   "Copycat Card": {
+      "Text": "When another card is played, temporarily copy its main value"
+   },
+   "Devil's Advocate": {
+      "Text": "Gain +{} points. Your money becomes 0",
+      "Played": "Devil'd!"
+   },
+   "Dollar Bill": {
+      "Text": "When played, gain m{} money",
+      "Played": "m{}$!"
+   },
+   "Draw 2 card": {
+      "Text": "When played, your opponent draws n{} cards",
+      "Played": "Draw n{}!"
+   },
+   "Draw 25 card": {
+      "Text": "When played, your opponent draws n{} cards. Remove this card from your deck",
+      "Played": "Draw n{}!"
+   },
+   "Early Bird": {
+      "Text": "When played, if this is the first card you played, gain m{} money",
+      "Played": "m{}$!"
+   },
+   "Emerald card": {},
+   "Explosive Gains": {
+      "Text": "Whenever you play a Smoked card, if this card is in your hand, it gains +{} points",
+      "Trigger": "+{}!"
+   },
+   "Factory Card": {
+      "Text": "When played, Smoke n{} random opponent's cards",
+      "Played": "Smoked!"
+   },
+   "Fair Market Price": {
+      "Text": "When played, give your opponent a card from your deck. Steal m{} money",
+      "Trigger": "+{}!"
+   },
+   "Fast and Furious": {
+      "Text": "Whenever you play a card, if this card is in your hand, it gains +{} temporary points",
+      "Trigger": "+{}!"
+   },
+   "Final Word": {
+      "Text": "If this card ends the round, gain m{} money",
+      "Trigger": "m{}$!"
+   },
+   "Fix it in post": {
+      "Text": "When drawn, add a random temporary color to this card",
+      "Drawn": "{Color}!"
+   },
+   "Fixer Upper card": {
+      "Text": "Whenever you play a card, if this card is in your deck, it gains +{} points",
+      "Trigger": "+{}!"
+   },
+   "Flashbang": {
+      "Text": "When drawn, Smoke 2 opponent's cards of their choice",
+      "ChoiceText": "Choose cards to Smoke",
+      "Drawn": "Smoked!"
+   },
+   "Flashcard": {
+      "Text": "When played, draw d{} cards. They gain temporary x{} mult",
+      "Played": "Draw d{}!"
+   },
+   "Fog Forecast": {
+      "Text": "Whenever you draw a card, if this card is in your hand, Smoke the drawn card and gain m{} money",
+      "Trigger": "m{}$!"
+   },
+   "Ghost Pepper": {
+      "Text": "Whenever you play a Smoked card, Combo this card. It gains temporary x{} mult",
+      "Trigger": "Combo!"
+   },
+   "Glitched Card": {
+      "Text": "Whenever another card is played, temporarily ramdomize color and value",
+      "Played": "Surprise!"
+   },
+   "Grapeshot": {
+      "Text": "Whenever you play another card, if this card is in your hand, it gains temporary x{} mult",
+      "Trigger": "x{}!"
+   },
+   "Green Energy": {
+      "Text": "Whenever you recycle a card and this card is in your hand, this card gains +{} points",
+      "Trigger": "+{}!"
+   },
+   "Hand of Midas": {
+      "Text": "When played, choose a card in your hand. Temporarily change its color to orange and gain m{} money",
+      "ChoiceText": "Choose card to change",
+      "Played": "m{}$!"
+   },
+   "Harvest": {
+      "Text": "Whenever you buy a card, this card gains +{} points",
+      "Trigger": "+{}!"
+   },
+   "Hedge Funding": {
+      "Text": "When played, recycle up to c{} cards. Clean all Smoked cards and Smoke all Clean cards",
+      "ChoiceText": "Choose cards to recycle",
+      "Played": "Recycled!"
+   },
+   "Hitchhiker": {
+      "Text": "Whenever you play a green card, Combo this card",
+      "Trigger": "Combo!"
+   },
+   "Hors D'oeuvre": {
+      "Text": "Whenever you refresh the shop, this card gains +{} points",
+      "Trigger": "+{}!"
+   },
+   "Hostile Takeover": {
+      "Text": "When played, double your money. This card's score is your money * +{}",
+      "Played": "Cha-Ching!"
+   },
+   "Incense": {
+      "Text": "When played, you may Combo a Smoked card",
+      "Played": "Combo!"
+   },
+   "Jasper card": {},
+   "Joker Card": {
+      "Text": "Doesn't count as the top card"
+   },
+   "Kill the Tower": {
+      "Text": "When played, gain temporary x{} mult per card in pile",
+      "Played": "{Mult}!"
+   },
+   "Land Tax": {
+      "Text": "When played, Smoke up to c{} cards. For each card, Steal m{} money",
+      "ChoiceText": "Choose cards to Smoke",
+      "Played": "m{}$!"
+   },
+   "Left Crocks of the Prohibited One": {
+      "Text": "When all pieces are gathered, create the Prohibited One in your hand. Remove all pieces"
+   },
+   "Left Furry Glove of the Prohibited One": {
+      "Text": "When all pieces are gathered, create the Prohibited One in your hand. Remove all pieces"
+   },
+   "Light Pollution": {
+      "Text": "When played, Clean a card in your hand and Smoke a random Opponent's card in both hand and deck",
+      "ChoiceText": "Choose card to Clean",
+      "Played": "Cleaned!"
+   },
+   "Liquidation Sale": {
+      "Text": "Whenever you remove a card, this card gains +{} points",
+      "Trigger": "+{}!"
+   },
+   "Live fast, Die young": {
+      "Text": "When played, gain x{}  ",
+      "Played": "x{}!"
+   },
+   "Looting Card": {
+      "Text": "When played, everyone recycles a random card",
+      "Played": "Recycled!"
+   },
+   "Lucky 7": {
+      "Text": "This card's score is your money * +{}"
+   },
+   "Magpie card": {
+      "Text": "When played, add a card from your deck to your hand",
+      "Played": "Cacaw!"
+   },
+   "Mau, the Prohibited One": {
+      "Text": "On round end, gain an effect based on position:\nIn hand - Start next round with 1 less card\nIn deck - gain m{} money\nIn pile - gain +{} points\nSmoked - Your opponent starts next round with a Smoked hand\n\nOn turn start, if this is the only card in your hand, you win the round"
+   },
+   "Middleman arrangement": {
+      "Text": "When you Activate a side card and this card is in your hand, gain m{} money",
+      "Trigger": "m{}$!"
+   },
+   "Miner Card": {
+      "Text": "When you Activate a side card and this card is in your hand, this card gains temporary +{} points",
+      "Trigger": "+{}!"
+   },
+   "Mutually Assured Destruction": {
+      "Text": "When you Activate a side card, everyone Smokes a random card",
+      "Trigger": "Smoked!"
+   },
+   "NFT card": {
+      "Text": "When played, half your money. This card's score is your money * x{}",
+      "Played": "NFT'd!"
+   },
+   "No u card": {
+      "Text": "If this card got Smoked due to opponent effect, Smoke their hand",
+      "Played": "No u!"
+   },
+   "Painter's Card": {
+      "Text": "When another card is played, temporarily copy its color(s)",
+      "Trigger": "Copied!"
+   },
+   "Patchwork": {
+      "Text": "When you play another card, temporarily become a copy of that card",
+      "Trigger": "Copied!"
+   },
+   "Perfume Card": {
+      "Text": "Starts rounds Smoked. When Cleaned, gain temporary x{} mult",
+      "Trigger": "x{}!"
+   },
+   "Piledriver": {
+      "Text": "This card's score is equal to cards in the pile * n{}"
+   },
+   "Plus Card": {
+      "Text": "When played, Combo another card",
+      "ChoiceText": "Choose card to Combo",
+      "Played": "Combo"
+   },
+   "Pool's Closed": {
+      "Text": "When played, gain temporary +{} points for each Smoked card in your hand",
+      "Played": "+{}!"
+   },
+   "Post-it Note": {
+      "Text": "Whenever you play a card, if this card is in your hand, it gains temporary points equal to that card's main value",
+      "Played": "+{}!"
+   },
+   "Prism Card": {
+      "Text": "Always counts as all colors"
+   },
+   "Queue Card": {
+      "Text": "When played, put the card at the bottom of the pile on top",
+      "Played": "Queued!"
+   },
+   "Reckless Spending": {
+      "Text": "Whenever you spend money, this card gains +{} points",
+      "Trigger": "+{}!"
+   },
+   "Refreshments": {
+      "Text": "Whenever you recycle this card, Refresh a random side card"
+   },
+   "Right Gottem of the Prohibited One": {
+      "Text": "When all pieces are gathered, create the Prohibited One in your hand. Remove all pieces"
+   },
+   "Right Socks with Sandles of the Prohibited One": {
+      "Text": "When all pieces are gathered, create the Prohibited One in your hand. Remove all pieces"
+   },
+   "Roulette machine": {
+      "Text": "When played, guess a number. If you guessed correctly, double your points",
+      "Played": "Winner!/Loser..."
+   },
+   "Ruby card": {},
+   "Rush Job": {
+      "Text": "When played, Combo up to c{} cards. They are considered wild",
+      "ChoiceText": "Choose cards to Combo",
+      "Played": "Combo"
+   },
+   "Sapphire card": {},
+   "Sauna": {
+      "Text": "Whenever a card is Smoked, if this card is in your hand, it gains x{} mult",
+      "Trigger": "x{}!"
+   },
+   "Shared Account": {
+      "Text": "This card's score is everyone's money * +{}"
+   },
+   "Short Squeeze": {
+      "Text": "This card's score is your money * +{}"
+   },
+   "Shrapnal Bomb": {
+      "Text": "When played, Smoke your opponent's hand, then recycle it",
+      "Played": "Smoked!"
+   },
+   "Slow and Steady": {
+      "Text": "When another card is played, if this card is in your hand, this card gains +{} points",
+      "Trigger": "+{}!"
+   },
+   "Smoke Bomb": {
+      "Text": "When played, Smoke n{} random opponent's deck cards",
+      "Played": "Smoked!"
+   },
+   "Special Gavel": {
+      "Text": "When played, recycle all cards in your hand",
+      "Played": "Recycled!"
+   },
+   "Steamer card": {
+      "Text": "When played, Smoke up to c{} cards in your hand. For each, this card gains temporary x{} mult",
+      "ChoiceText": "Choose cards to Smoke",
+      "Played": "x{}!"
+   },
+   "Stock Certificate": {
+      "Text": "When played, draw a card. Gain money equal to x{} its main value",
+      "Played": "x{}!"
+   },
+   "Straightjacket 8": {
+      "Text": "Cards that are not an 8 cannot be played on top of this card"
+   },
+   "Surf's Up!": {
+      "Text": "Whenever you Clean a card, if this card is in your hand, it gains +{} points",
+      "Trigger": "+{}!"
+   },
+   "Surprise card!": {
+      "Text": "Completely random when played!",
+      "Played": "Surprise!"
+   },
+   "Sweet Memories": {
+      "Text": "When played, Refresh all Side Cards you have",
+      "Played": "Refreshed!"
+   },
+   "Take 5": {
+      "Text": "When played, your opponent draws n{} cards",
+      "Played": "Draw n{}!"
+   },
+   "The Dynamo": {
+      "Text": "Whenever you play a red card, if this card is in your hand, it gains +{} points",
+      "Trigger": "+{}!"
+   },
+   "The Nail": {
+      "Text": "When played, increase main value by n{}",
+      "Played": "Nailed!"
+   },
+   "Throwback": {
+      "Text": "When played, choose a card from c{} random cards from the pile. Add a copy of it to your hand",
+      "ChoiceText": "Choose card to add",
+      "Played": "Thrown!"
+   },
+   "Trade Offer Card": {
+      "Text": "When played, you may give your opponent a card from your hand. They give you 1 random card",
+      "Played": "Traded!"
+   },
+   "Water Balloon": {
+      "Text": "When played, Smoke a random opponent's deck card for each blue card in the pile",
+      "Played": "Smoked!"
+   },
+   "Where there's Smoke, there's fire": {
+      "Text": "Whenenever you draw, this card gains x{} mult for each Smoked card drawn",
+      "Trigger": "x{}!"
+   },
+   "Wire Tap": {
+      "Text": "Whenever you Activate a side card, this card gains x{} mult",
+      "Trigger": "x{}!"
+   },
+   "X card": {
+      "Text": "When played, change pile value to a value of your choice.",
+      "ChoiceText": "Choose value",
+      "Played": "{value}!"
+   },
+   "X of Cups": {
+      "Text": "When drawn, Smoke n{} random opponent's deck card",
+      "Drawn": "Smoked!"
+   },
+   "X of Pentacles": {
+      "Text": "When played, gain m{} money. This card's score is your money * m{}",
+      "Played": "m{}$!"
+   },
+   "X of Swords": {},
+   "X of Wands": {
+      "Text": "When played, recycle c{} card",
+      "ChoiceText": "Choose card to recycle",
+      "Played": "Recycled!"
+   }
+}

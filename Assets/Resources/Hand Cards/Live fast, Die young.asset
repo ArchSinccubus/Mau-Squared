@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5dfad5a521757947b29737054ab72b2, type: 3}
+  m_Name: Live fast, Die young
+  m_EditorClassIdentifier: 
+  Name: Live fast, Die young
+  CardFront: {fileID: 21300000, guid: bff741c8815495a419bedda16b5bad7a, type: 3}
+  CardBack: {fileID: 21300000, guid: 1498d64a3e27de546970014cc29eb959, type: 3}
+  Description: Whenever you play this card, double it's point value.
+  AIStrategyType: 02000000
+  AIChoice: 0
+  AIAffectsSelf: 0
+  ScoreAmount: 0
+  MultAmount: 2
+  ChoiceAmount: 0
+  MoneyAmount: 0
+  NumberAmount: 0
+  Rarity: 3
+  cardColors: 00000000
+  cardValues: 
+  PreWild: 1
+  PostWild: 0

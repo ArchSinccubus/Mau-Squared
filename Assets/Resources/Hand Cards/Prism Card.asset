@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a65ded67fc87a834e9c34fddc8a42870, type: 3}
+  m_Name: Prism Card
+  m_EditorClassIdentifier: 
+  Name: Prism Card
+  CardFront: {fileID: 21300000, guid: bff741c8815495a419bedda16b5bad7a, type: 3}
+  CardBack: {fileID: 21300000, guid: 1498d64a3e27de546970014cc29eb959, type: 3}
+  Description: Always counts as all colors
+  AIStrategyType: 010000000600000008000000
+  AIChoice: 0
+  AIAffectsSelf: 0
+  Rarity: 0
+  cardColors: 00000000010000000200000003000000
+  cardValues: 
+  PreWild: 1
+  PostWild: 1
