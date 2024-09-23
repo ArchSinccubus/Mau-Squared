@@ -83,11 +83,11 @@ public class CardSOBase : ScriptableObject, ISubscriber
     }
 
     public string ConvertStringToValues(string s)
-    { 
-        return s.Replace("+{}", "<color=#ff0000ff>+" + ScoreAmount + "</color>").
-            Replace("x{}", "<color=#ff0000ff>x" + MultAmount + "</color>").
-            Replace("c{}", "<color=#008000ff>" + ChoiceAmount + "</color>").
-            Replace("m{}", "<color=#ffa500ff>" + MoneyAmount + "</color>").
-            Replace("n{}", "<color=#0000ffff>" + NumberAmount + "</color>");
+    {
+        return s.Replace("+{}", ScoreAmount.ToString().
+            Replace("x{}", MultAmount.ToString()).
+            Replace("c{}", ChoiceAmount.ToString()).
+            Replace("m{}", MoneyAmount.ToString()).
+            Replace("n{}", NumberAmount.ToString()));
     }
 }

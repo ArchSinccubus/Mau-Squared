@@ -194,13 +194,14 @@ public class CardVisualHandler : MonoBehaviour, ICardVisuals, IBeginDragHandler,
     {
         if (origScale == Vector2.zero)
         {
-            CardLoc.localScale = new Vector3(rectTrans.localScale.x * mult, rectTrans.localScale.y * mult, 1);
+            CardLoc.localScale = new Vector3(rectTrans.localScale.x * mult, rectTrans.localScale.y * mult, 1); 
             SetOrigSize();
         }
         else
         {
             CardLoc.localScale = origScale * mult;
         }
+
     }
 
     public void ResetSizeCard()
@@ -698,12 +699,32 @@ public class CardVisualHandler : MonoBehaviour, ICardVisuals, IBeginDragHandler,
         while (time < curve.returnTotalTime())
         {
 
-            CardLoc.transform.localScale = Vector3.one * curve.returnValue(time);
+            CardLoc.transform.localScale = origScale * curve.returnValue(time);
             time += Time.deltaTime * GameManager.GetTimeSpeedModifier();
             yield return new WaitForGameEndOfFrame();
         }
 
-        CardLoc.transform.localScale = Vector3.one;
+        CardLoc.transform.localScale = origScale;
+    }
+
+    public IEnumerator ResizePop(float newSize)
+    {
+        CurveContainerScriptableObject curve = GameManager.instance.AssetLibrary.curves["pop"];
+
+        float time = 0;
+        Vector3 currScale = origScale;
+
+        while (time < curve.returnTotalTime())
+        {
+
+            CardLoc.transform.localScale = currScale * curve.returnValue(time);
+            time += Time.deltaTime * GameManager.GetTimeSpeedModifier();
+            currScale = origScale * Mathf.Lerp(origScale.magnitude, newSize, time);
+            yield return new WaitForGameEndOfFrame();
+        }
+
+        currScale = origScale * newSize;
+        CardLoc.transform.localScale = currScale;
     }
 
     public IEnumerator Wiggle()

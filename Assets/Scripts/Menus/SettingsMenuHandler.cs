@@ -6,6 +6,8 @@ using UnityEngine.UI;
 using FMODUnity;
 using FMOD.Studio;
 using System.Linq;
+using SOHNE.Accessibility.Colorblindness;
+using System;
 
 public class SettingsMenuHandler : MonoBehaviour
 {
@@ -17,13 +19,15 @@ public class SettingsMenuHandler : MonoBehaviour
 
     public GameObject GameplayC, VideoC, GraphicsC, AudioC;
 
-    public TMPro.TMP_Dropdown WindowType, Resolution;
+    public TMPro.TMP_Dropdown WindowType, Resolution, ColorBlindTypes;
 
     public UDictionary<string, SettingsBase> settings;
 
     Resolution[] resolutions;
 
     Bus Master, Music, SFX;
+
+    public Colorblindness colorBlindManager;
 
     [SerializeField]
     private EventReference SFXTextEvent;
@@ -38,6 +42,7 @@ public class SettingsMenuHandler : MonoBehaviour
         resolutions = ReturnNonDupes(Screen.resolutions);
 
         Resolution.ClearOptions();
+
         List<string> reses = new List<string>();
         foreach (var item in resolutions)
         {
@@ -140,6 +145,8 @@ public class SettingsMenuHandler : MonoBehaviour
 
         GameManager.instance.SavedSettings.showKeywords = (bool)settings["Tips"].ReturnData();
 
+        GameManager.instance.SavedSettings.colorBlindMode = (int)settings["ColorBlindType"].ReturnData();
+
 
         Final = JsonUtility.ToJson(GameManager.instance.SavedSettings);
 
@@ -157,6 +164,8 @@ public class SettingsMenuHandler : MonoBehaviour
         settings["WindowMode"].OnLoad(file.mode);
         settings["WindowResolution"].OnLoad(file.resolution);
 
+        settings["ColorBlindType"].OnLoad(file.colorBlindMode);
+
         settings["Tips"].OnLoad(file.showKeywords);
 
     }
@@ -168,6 +177,7 @@ public class SettingsMenuHandler : MonoBehaviour
         SetMasterVolume(file.MasterVolume);
         SetMusicVolume(file.MusicVolume);
         SetSFXVolume(file.SFXVolume);
+        SetColorBlindType(file.colorBlindMode);
     }
 
     #region SetSettings
@@ -175,6 +185,11 @@ public class SettingsMenuHandler : MonoBehaviour
     {
         Resolution newRes = resolutions[index];
         Screen.SetResolution(newRes.width, newRes.height, Screen.fullScreen);
+    }
+
+    public void SetColorBlindType(int type)
+    {
+        colorBlindManager.InitChange(type);
     }
 
     public void SetFullScreen(int index)

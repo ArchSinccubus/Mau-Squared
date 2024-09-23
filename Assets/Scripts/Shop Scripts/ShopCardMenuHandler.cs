@@ -41,7 +41,8 @@ public class ShopCardMenuHandler : CardMenuHandler
     public void SelectCard(ICardVisuals card, int price)
     {
         card.SetSelect(true);
-        card.ResizeCard(1.25f);
+        StartCoroutine(card.ResizePop(1.25f));
+        cardContainer.slots[card].transform.localScale = Vector3.one * 1.25f;
         (cardContainer as ShopCardContainer).OnCardSelect(price, card);
     }
 
@@ -49,6 +50,7 @@ public class ShopCardMenuHandler : CardMenuHandler
     {
         card.SetSelect(false);
         card.ResetSizeCard();
+        cardContainer.slots[card].transform.localScale = Vector3.one;
         (cardContainer as ShopCardContainer).OnCardDeselect(card);
     }
 

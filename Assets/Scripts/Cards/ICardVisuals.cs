@@ -103,6 +103,8 @@ public interface ICardVisuals
 
     public IEnumerator Pop();
 
+    public IEnumerator ResizePop(float newSize);
+
     public IEnumerator Wiggle();
 
     public IEnumerator TriggerShine(bool show);

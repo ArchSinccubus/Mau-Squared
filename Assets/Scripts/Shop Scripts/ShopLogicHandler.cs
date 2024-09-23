@@ -537,10 +537,10 @@ public class ShopLogicHandler : MonoBehaviour, IGameScreen
                     }
                 }
 
-                selectedCard = card;
-                StartCoroutine(selectedCard.visuals.Pop());
-
+                selectedCard = card; 
                 visuals.SelectCard(card.visuals, card.price, card.baseData.SideCard);
+
+
                 visuals.UpdateBuyButton(currMoney >= card.price, false);
             }
         }

@@ -1,7 +1,6 @@
 using System;
 using System.Linq;
 using UnityEngine;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Assets.Scripts.Auxilary;
 

@@ -44,6 +44,7 @@ public class StatsScreenSubMenu : MonoBehaviour
             SideCardDataHandler FavSideCard = new SideCardDataHandler(tempSO2);
             FavSideCard.InitForView(false, 10000, false);
             FavSideCard.visuals.SetDraggable(true);
+            FavSideCard.visuals.SetHighlightable(true);
             FavSideCard.visuals.ResizeCard(1.5f);
             FaveSide.SetupSlots(FavSideCard.visuals);
             FaveSide.PutNewCard(FavSideCard.visuals);

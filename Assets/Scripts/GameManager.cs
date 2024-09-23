@@ -1,19 +1,14 @@
 using Assets.Scripts.Auxilary;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using SickDev.CommandSystem;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using FMODUnity;
-using FMOD;
 using Random = System.Random;
 using Debug = UnityEngine.Debug;
-using UnityEditor.PackageManager.UI;
 
 
 //Global Controller for the game at large. Will handle heavy duty tasks and run things along
@@ -35,6 +30,8 @@ public class GameManager : MonoBehaviour
 
     public static int NUMBER_SPIN_FPS = 60;
     public static float NUMBER_SPIN_DURATION = 0.75f;
+
+    public static float RESET_PRESS_TIME = 2f;
     #endregion
 
     public GlobalSaveFormatSO globalVars;
@@ -64,6 +61,9 @@ public class GameManager : MonoBehaviour
 
     public Canvas canvas;
     public Canvas MenuCanvas;
+
+    float resetTimer;
+    bool startResetTimer;
     #endregion
 
     #region RunData
@@ -93,8 +93,6 @@ public class GameManager : MonoBehaviour
     public GameObject MenuHider;
 
     public BlackoutHandler blackout;
-
-
 
     #endregion
 
@@ -158,13 +156,6 @@ public class GameManager : MonoBehaviour
         //Application.logMessageReceived += Application_logMessageReceived;
     }
 
-    private void Application_logMessageReceived(string condition, string stackTrace, LogType type)
-    {
-
-
-        Debug.Log(condition);
-    }
-
     public void PauseGame()
     {
         //Time.timeScale = 0f;
@@ -210,11 +201,30 @@ public class GameManager : MonoBehaviour
             }
 
         }
-        if (Input.GetKeyDown(KeyCode.J))
+
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            currRun.CalculateLikelyColor();
+            startResetTimer = true;
+
         }
 
+        if (Input.GetKeyUp(KeyCode.R) && startResetTimer)
+        {
+            startResetTimer = false;
+            resetTimer = 0;
+        }
+
+        if (startResetTimer)
+        {
+            resetTimer += Time.deltaTime;
+            if (resetTimer >= RESET_PRESS_TIME)
+            {
+                //reset game here
+
+                startResetTimer = false;
+                resetTimer = 0;
+            }
+        }
         //if (Input.GetMouseButtonDown(0))
         //{
         //    Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

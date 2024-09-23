@@ -26,4 +26,10 @@ public class SettingsFormat
     public float SFXVolume;
 
     #endregion
+
+    #region Graphics
+
+    public int colorBlindMode;
+
+    #endregion
 }

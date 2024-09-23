@@ -20,7 +20,11 @@ public class CardDetailHandler : MonoBehaviour
     {
         gameObject.SetActive(true);
         CardTitle.text = Name;
+
+        Description = ActivateHintBoxes(Description);
+
         CardDescription.text = Description;
+ 
         if (Score != "")
         {
             string deepDive = "";
@@ -41,11 +45,7 @@ public class CardDetailHandler : MonoBehaviour
         {
             CardScore.gameObject.SetActive(false);
         }
-
-        if (GameManager.instance.SavedSettings.showKeywords)
-        {
-            ActivateHintBoxes(Description);
-        }
+        
     }
 
     public void Deload()
@@ -62,17 +62,23 @@ public class CardDetailHandler : MonoBehaviour
         gameObject.SetActive(false);     
     }
 
-    public void ActivateHintBoxes(string desc)
+    public string ActivateHintBoxes(string desc)
     {
-        string[] words = desc.ToLower().Split(" ");
+        string[] words = desc.Split(" ");
 
         foreach (var item in words)
         {
-            if (HintTextBoxes.ContainsKey(item))
+            if (HintTextBoxes.ContainsKey(item.ToLower()))
             {
-                HintTextBoxes[item].SetActive(true);
+                desc = desc.Replace(item, "<b>" + item + "</b>");
+                if (GameManager.instance.SavedSettings.showKeywords)
+                {
+                    HintTextBoxes[item.ToLower()].SetActive(true);
+                }
             }
         }
+
+        return desc;
     }
 
     private void Update()

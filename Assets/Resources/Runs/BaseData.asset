@@ -28,7 +28,7 @@ MonoBehaviour:
     TimesRemoved: 0
     TimesSoldSide: 0
     RefreshCostStart: 0
-    RemoveCostStart: 0
+    RemoveCostStart: 2
     AddSideCardSpaceCostStart: 30
   rarityChanceData:
     CommonWeight: 10
