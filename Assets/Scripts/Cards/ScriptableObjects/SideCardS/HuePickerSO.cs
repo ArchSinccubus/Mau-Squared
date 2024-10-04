@@ -49,7 +49,7 @@ public class HuePickerSO : SideCardSO, IObserverOnPreStartRound, IObserverOnStar
 
         foreach (var item in card.owner.Hand)
         {
-            GameManager.instance.StartCoroutine(list.CountCoroutine(changeCard(item, (Colors)card.TempData1)));
+            card.owner.visuals.StartCoroutine(list.CountCoroutine(changeCard(item, (Colors)card.TempData1)));
         }
 
         yield return list;
@@ -81,6 +81,8 @@ public class HuePickerSO : SideCardSO, IObserverOnPreStartRound, IObserverOnStar
             tempCard.SetMainValue(0);
 
             list.Add(tempCard);
+
+            tempCard.IsShowToolTip = false;
         }
 
         CoroutineWithData<HandCardDataHandler[]> cd = new CoroutineWithData<HandCardDataHandler[]>(GameManager.Round, entity.MakeChoice(list.ToArray(), choiceText, 1, CardMenuChoiceMode.Forced, SetChoiceType.PreColor));

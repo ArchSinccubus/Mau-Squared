@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Card", menuName = "Mau/Cards/Hand/New DevilSO")]
 public class DevilSO : SideCardSO, IObserverOnDraw
 {
+    public override bool Tarot => true;
+
     public override void Subscribe(object subscriber)
     {
         ObserverManagerSystem.SubscribeToLibrary(DictionaryTypes.OnDraw, subscriber, this);
@@ -19,7 +21,16 @@ public class DevilSO : SideCardSO, IObserverOnDraw
     {
         EntityHandler entity = args.Caller as EntityHandler;
 
+        HandCardDataHandler card = args.Sender as HandCardDataHandler;
+
         yield return entity.AddMoney(MoneyAmount);
+
+        if (card.data.Tarot)
+        {
+            card.SetTempWild();
+
+            yield return entity.TriggerCard(card, "Wild!");
+        }
     }
 
     public override bool CanTrigger(BaseCardDataHandler card, EventDataArgs args, DictionaryTypes EventType)

@@ -8,6 +8,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Card", menuName = "Mau/Cards/Side/New MagicianSO")]
 public class MagicianSO : HandChoiceSideSO
 {
+    public override bool Tarot => true;
+
     public override bool Clickable => true;
 
     public override IEnumerator DoCommand(SideCardDataHandler card)
@@ -25,7 +27,19 @@ public class MagicianSO : HandChoiceSideSO
         if (cd.result.Length > 0)
         {
             yield return card.owner.SmokeCards(card.owner, cd.result);
-            yield return card.owner.AddScore(cd.result.Length * ScoreAmount);
+
+            int finalScore = 0;
+
+            foreach (var item in cd.result)
+            {
+                finalScore += ScoreAmount;
+                if (item.data.Tarot)
+                {
+                    finalScore += ScoreAmount;
+                }
+            }
+
+            yield return card.owner.AddScore(finalScore);
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 //The manager for a specific run. Will handle all the carriable resources the player has, as well as their deck outside of games.
 public class RunManager 
@@ -34,17 +35,23 @@ public class RunManager
     public ShopLogicHandler shopScene;
     public EnemyChoiceDataHandler enemyChoiceScene;
 
+    public BackroundManager background;
+
+    public MonoBehaviour CoroutineRunner;
+
     public bool MauPunishE, MauPunishP;
     public int MauCardE, MauCardP;
 
     public CustomRandom RoundRand, ShopRand;
 
-    public RunManager(RoundLogicManager round, ShopLogicHandler shop, EnemyChoiceDataHandler enemySelect)
+
+    public RunManager(RoundLogicManager round, ShopLogicHandler shop, EnemyChoiceDataHandler enemySelect, BackroundManager backround, MonoBehaviour coroutineRunner)
     {
         roundScene = round;
         shopScene = shop;
         enemyChoiceScene = enemySelect;
-
+        background = backround;
+        CoroutineRunner = coroutineRunner;
     }
 
     public void StartRun(DeckSO deck, bool customSeed, string newSeed)
@@ -100,7 +107,8 @@ public class RunManager
         roundScene.StopAllCoroutines();
         shopScene.StopAllCoroutines();
         enemyChoiceScene.StopAllCoroutines();
-        GameManager.instance.StopAllCoroutines();
+        background.StopAllCoroutines();
+        CoroutineRunner.StopAllCoroutines();
 
         GlobalSaveFormat.EndRun(CalculateLikelyStrat(), CalculateLikelyColor());
 
@@ -120,6 +128,7 @@ public class RunManager
 
         PoolingManager.ReturnAllToPool();
         AudioManager.ShiftToMenu();
+        GameManager.instance.state = GameState.InMenu;
     }
 
     public IEnumerator StartShop()
@@ -127,9 +136,12 @@ public class RunManager
         shopScene.transform.parent.gameObject.SetActive(true);
         shopScene.InitScreen();
 
+        yield return background.MoveBackroundIn(GameManager.instance.VisualAssetLibrary.ShopBackground);
+
         yield return player.SetupSide();
         yield return shopScene.visuals.mover.MoveScreen(true);
 
+        GameManager.instance.state = GameState.InShop;
         AudioManager.ShiftToShop();
 
         yield return ObserverManagerSystem.NotifyEvents(DictionaryTypes.OnShopEnter, GameManager.currRun, this);
@@ -142,9 +154,11 @@ public class RunManager
         shopScene.transform.parent.gameObject.SetActive(true);
         shopScene.InitScreen(save);
 
+        background.PutBackgroundIn(GameManager.instance.VisualAssetLibrary.ShopBackground);
 
-        GameManager.instance.StartCoroutine(player.SetupSide());
+        CoroutineRunner.StartCoroutine(player.SetupSide());
         shopScene.visuals.mover.PutScreen(true);
+        GameManager.instance.state = GameState.InShop;
 
         AudioManager.ShiftToShop();
 
@@ -159,7 +173,10 @@ public class RunManager
         //baseData.RoundNum = 1;
         //Debug.Log("Remember to remove RoundNum = 1 for Side Card testing!");
 
+
+
         enemyChoiceScene.InitScreen(generateOpponent(), generateOpponent(), generateOpponent());
+        GameManager.instance.state = GameState.inChoice;
 
         AudioManager.ShiftToMenu();
 
@@ -174,6 +191,9 @@ public class RunManager
         //baseData.RoundNum = 1;
         //Debug.Log("Remember to remove RoundNum = 1 for Side Card testing!");
         AudioManager.ShiftToMenu();
+        GameManager.instance.state = GameState.inChoice;
+
+        background.PutBackgroundIn(GameManager.instance.VisualAssetLibrary.ShopBackground);
 
         enemyChoiceScene.InitScreen(save);
         playerVis.PutLayout(false);
@@ -188,11 +208,18 @@ public class RunManager
         roundScene.transform.parent.gameObject.SetActive(true);
         roundScene.InitScreen(150, player, opponent);
         baseData.RoundNum++;
-        GameManager.instance.StartCoroutine(list.CountCoroutine(roundScene.visuals.mover.MoveScreen(true)));
-        GameManager.instance.StartCoroutine(list.CountCoroutine(playerVis.MoveLayout(true)));
+
+        string imageName = "";
+
+        yield return background.MoveBackroundIn(GameManager.instance.VisualAssetLibrary.GetRandomBackground(RoundRand, out imageName));
+
+        roundScene.backgroundName = imageName;
+
+        CoroutineRunner.StartCoroutine(list.CountCoroutine(roundScene.visuals.mover.MoveScreen(true)));
+        CoroutineRunner.StartCoroutine(list.CountCoroutine(playerVis.MoveLayout(true)));
 
         yield return list;
-
+        GameManager.instance.state = GameState.InRound;
         AudioManager.ShiftToRound();
 
         roundScene.StartCoroutine(roundScene.HandleRound(false));
@@ -206,11 +233,15 @@ public class RunManager
 
         roundScene.InitScreen(save);
 
+        background.PutBackgroundIn(GameManager.instance.VisualAssetLibrary.GetBackground(save.backgroundName));
+        roundScene.backgroundName = save.backgroundName;
+
         roundScene.visuals.mover.PutScreen(true);
         playerVis.PutLayout(true);
 
         //baseData.RoundNum = save.RoundNum;
         roundScene.AnteAmount = save.RoundAnte;
+        GameManager.instance.state = GameState.InRound;
 
         roundScene.StartCoroutine(roundScene.HandleRound(true));
 
@@ -291,13 +322,15 @@ public class RunManager
         //
         //shopScene.transform.parent.position = Vector3.zero;
 
-        GameManager.instance.StartCoroutine(list.CountCoroutine(playerVis.MoveLayout(false)));
-        GameManager.instance.StartCoroutine(list.CountCoroutine(roundScene.visuals.mover.MoveScreen(false)));
+        CoroutineRunner.StartCoroutine(list.CountCoroutine(playerVis.MoveLayout(false)));
+        CoroutineRunner.StartCoroutine(list.CountCoroutine(roundScene.visuals.mover.MoveScreen(false)));
         roundScene.transform.parent.gameObject.SetActive(false);
 
         yield return list;
 
-        yield return GameManager.instance.StartCoroutine(StartShop());
+        yield return background.MoveBackroundOut();
+
+        yield return CoroutineRunner.StartCoroutine(StartShop());
 
     }
 
@@ -313,7 +346,7 @@ public class RunManager
         //
         //enemyChoiceScene.transform.parent.position = Vector3.zero;
 
-        yield return GameManager.instance.StartCoroutine(StartChoice());
+        yield return CoroutineRunner.StartCoroutine(StartChoice());
 
     }
 
@@ -322,12 +355,13 @@ public class RunManager
         yield return enemyChoiceScene.visuals.mover.MoveScreen(false);
         enemyChoiceScene.transform.parent.gameObject.SetActive(false);
 
+        yield return background.MoveBackroundOut();
 
         //enemyChoiceScene.transform.parent.position = GameManager.instance.OutOfSightLoc.position;
         //
         //roundScene.transform.parent.position = Vector3.zero;
-        
-        yield return GameManager.instance.StartCoroutine(StartRound(npc));
+
+        yield return CoroutineRunner.StartCoroutine(StartRound(npc));
     }
 
     public void IncreaseSideCardSize()

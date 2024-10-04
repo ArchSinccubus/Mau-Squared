@@ -7,6 +7,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Card", menuName = "Mau/Cards/Side/New ChariotSO")]
 public class ChariotSO : HandChoiceSideSO, IObserverOnEndTurn
 {
+    public override bool Tarot => true;
+
     public override void Subscribe(object subscriber)
     {
         ObserverManagerSystem.SubscribeToLibrary(DictionaryTypes.OnTurnEnd, subscriber, this);
@@ -29,7 +31,19 @@ public class ChariotSO : HandChoiceSideSO, IObserverOnEndTurn
             yield return new WaitForGameEndOfFrame();
         }
 
-        yield return entity.CleanCards(cd.result);
+        if (cd.result.Length > 0)
+        {
+            yield return entity.CleanCards(cd.result);
+
+            foreach (var item in cd.result)
+            {
+                if (item.data.Tarot)
+                {
+                    item.MultTempMultScore(MultAmount);
+                }
+            }
+        }
+
     }
 
     public override bool CanTrigger(BaseCardDataHandler card, EventDataArgs args, DictionaryTypes EventType)

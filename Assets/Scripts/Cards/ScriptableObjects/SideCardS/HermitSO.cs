@@ -6,6 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Card", menuName = "Mau/Cards/Side/New HermitSO")]
 public class HermitSO : SideCardSO, IObserverOnCardPlayed
 {
+    public override bool Tarot => true;
+
     public override void Subscribe(object subscriber)
     {
         ObserverManagerSystem.SubscribeToLibrary(DictionaryTypes.OnCardPlayed, subscriber, this);
@@ -34,8 +36,8 @@ public class HermitSO : SideCardSO, IObserverOnCardPlayed
 
         if (top != null)
         {
-            return data.owner == card.owner && data.returnModifiedData().cardValues.Intersect(top.returnUnmodifiedData().cardValues).Count() == 0 &&
-            data.returnModifiedData().cardColors.Intersect(top.returnUnmodifiedData().cardColors).Count() == 0;
+            return data.owner == card.owner && (data.returnModifiedData().cardValues.Intersect(top.returnUnmodifiedData().cardValues).Count() == 0 &&
+            data.returnModifiedData().cardColors.Intersect(top.returnUnmodifiedData().cardColors).Count() == 0 || top.data.Tarot != card.baseData.Tarot);
         }
         return false;
     }

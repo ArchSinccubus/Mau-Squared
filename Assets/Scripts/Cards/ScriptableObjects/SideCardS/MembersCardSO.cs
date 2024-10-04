@@ -91,6 +91,8 @@ public class MembersCardSO : SideCardSO, ICardDecorator, IObserverOnPreStartRoun
             tempCard.SetMainColor(Colors.None);
 
             list.Add(tempCard);
+
+            tempCard.IsShowToolTip = false;
         }
 
         CoroutineWithData<HandCardDataHandler[]> cd = new CoroutineWithData<HandCardDataHandler[]>(GameManager.Round, entity.MakeChoice(list.ToArray(), ReturnChoiceText(), 1, CardMenuChoiceMode.Forced, SetChoiceType.PreValue));

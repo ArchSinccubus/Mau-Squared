@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ac592134ec5bb4db741ff05b23189f, type: 3}
   m_Name: SmallDeck
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Small
   DeckBase:
   - {fileID: 11400000, guid: 0f0f336992597bf4ba1711d5843feb1c, type: 2}
   - {fileID: 11400000, guid: db1689e0b8edb2b4696c250dfe9c88f5, type: 2}

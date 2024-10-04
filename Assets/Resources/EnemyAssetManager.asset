@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: EnemyAssetManager
   m_EditorClassIdentifier: 
   EnemyDecks:
-    keys: 05000000010000000200000006000000080000000300000004000000
+    keys: 0500000001000000020000000600000008000000030000000400000007000000
     values:
-    - {fileID: 11400000, guid: 1938b7ad526d7ae4886ab10297331643, type: 2}
-    - {fileID: 11400000, guid: f68a507efbbe5394c9cc1c6a25640cb2, type: 2}
-    - {fileID: 11400000, guid: 7feecfa84a87d44439712b5686e0568e, type: 2}
-    - {fileID: 11400000, guid: 907108ca83f5a004a84584a602ec0831, type: 2}
+    - {fileID: 11400000, guid: 6a39c4ff56bfb3745b5205e6ae255725, type: 2}
+    - {fileID: 11400000, guid: 73751fbee9245334da66c6e748f61091, type: 2}
+    - {fileID: 11400000, guid: b3363d080e64e8b4b83b6c5f3c537cd3, type: 2}
+    - {fileID: 11400000, guid: 38f3bbb414c7aee42b9f27d0590e5349, type: 2}
     - {fileID: 11400000, guid: f3baefe6d27f40c4ba178886bfe84699, type: 2}
-    - {fileID: 11400000, guid: 38a335cb3f36fa64ea350a9ecb130abb, type: 2}
-    - {fileID: 11400000, guid: f69df794f313a1b48b6eacc20cb3c944, type: 2}
+    - {fileID: 11400000, guid: 7e746b2462b9cc346bbca8dea59ea667, type: 2}
+    - {fileID: 11400000, guid: e26dedccfdecb3f4c86b5008ce06c491, type: 2}
+    - {fileID: 11400000, guid: fd9b4ade1f86acc48919c28d20ed06f7, type: 2}
   EnemyValuationStats:
     keys: 030000000000000001000000040000000500000002000000
     values:

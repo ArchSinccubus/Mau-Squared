@@ -353,7 +353,7 @@ public class HandCardDataHandler : BaseCardDataHandler
 
     public override IEnumerator TriggerCardEffect(string text)
     {
-        Coroutine cor = GameManager.instance.StartCoroutine(visuals.PopText(text));
+        Coroutine cor = owner.visuals.StartCoroutine(visuals.PopText(text));
 
         yield return TriggerCardEffect();
 
@@ -410,7 +410,7 @@ public class HandCardDataHandler : BaseCardDataHandler
 
         visuals.SetDraggable(false);
 
-        Coroutine move = GameManager.instance.StartCoroutine(owner.visuals.MoveCardToPlay(visuals));
+        Coroutine move = owner.visuals.StartCoroutine(owner.visuals.MoveCardToPlay(visuals));
 
         owner.PlayCard(this);
         owner.visuals.RemoveFromHand(visuals);
@@ -421,8 +421,8 @@ public class HandCardDataHandler : BaseCardDataHandler
         yield return move;
 
         //Change later to include an animation for smoked cards playing
-        Coroutine anim = GameManager.instance.StartCoroutine(owner.TriggerCard(this));
-        GameManager.instance.StartCoroutine(visuals.TriggerShine(returnTempData().PostWild));
+        Coroutine anim = owner.visuals.StartCoroutine(owner.TriggerCard(this));
+        owner.visuals.StartCoroutine(visuals.TriggerShine(returnTempData().PostWild));
 
         yield return ObserverManagerSystem.NotifyPlayedCard(this);
 
@@ -459,10 +459,10 @@ public class HandCardDataHandler : BaseCardDataHandler
         visuals.SetDraggable(false);
 
         //ObserverManagerSystem.UnsubscribeFromLibrary(DictionaryTypes.OnCardPlayed, this);
-        Coroutine anim = GameManager.instance.StartCoroutine(owner.TriggerCard(this));
+        Coroutine anim = owner.visuals.StartCoroutine(owner.TriggerCard(this));
 
-        Coroutine move = GameManager.instance.StartCoroutine(GameManager.Round.visuals.MoveCardToPile(visuals));
-        GameManager.instance.StartCoroutine(visuals.TriggerShine(returnTempData().PostWild));
+        Coroutine move = owner.visuals.StartCoroutine(GameManager.Round.visuals.MoveCardToPile(visuals));
+        owner.visuals.StartCoroutine(visuals.TriggerShine(returnTempData().PostWild));
 
         owner.PlayCard(this);
         owner.visuals.RemoveFromHand(visuals);
@@ -562,13 +562,16 @@ public class HandCardDataHandler : BaseCardDataHandler
 
     public override void ShowToolTip()
     {
-        float Mult = (float)Math.Round(data.CalcMult(this) * returnModifiedData().Mult, 2);
+        if (IsShowToolTip)
+        {
+            float Mult = (float)Math.Round(data.CalcMult(this) * returnModifiedData().Mult, 2);
 
-        string finalToolTip = CustomToolTip != "" ? CustomToolTip : data.ReturnDescription();
+            string finalToolTip = CustomToolTip != "" ? CustomToolTip : data.ReturnDescription();
 
-        GameManager.instance.GenerateToopTip(data.Name, finalToolTip, ReturnCalcScore().ToString(),
-            (data.CalcScore(this) + returnModifiedData().Score).ToString(),
-            (Mult != 1 ? Mult.ToString() : ""), TempBase, TempMult);
+            GameManager.instance.GenerateToopTip(data.Name, finalToolTip, ReturnCalcScore().ToString(),
+                (data.CalcScore(this) + returnModifiedData().Score).ToString(),
+                (Mult != 1 ? Mult.ToString() : ""), TempBase, TempMult);
+        }
     }
     #endregion
 
@@ -636,7 +639,7 @@ public class HandCardDataHandler : BaseCardDataHandler
     {
         tempCardData.PostWild = true;
         tempCardData.PreWild = true;
-        GameManager.instance.StartCoroutine(visuals.TriggerShine(true));
+        owner.visuals.StartCoroutine(visuals.TriggerShine(true));
         owner.UpdateHand();
     }
 
@@ -649,7 +652,7 @@ public class HandCardDataHandler : BaseCardDataHandler
     public void SetTempNotPostWild()
     {
         tempCardData.PreWild = false;
-        GameManager.instance.StartCoroutine(visuals.TriggerShine(false));
+        owner.visuals.StartCoroutine(visuals.TriggerShine(false));
     }
 
     public void SetTempMainColor(Colors color)

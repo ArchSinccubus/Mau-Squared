@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Card", menuName = "Mau/Cards/Side/New TowerSO")]
 public class TowerSO : SideCardSO, IObserverOnCardSmoked
 {
+    public override bool Tarot => true;
+
     public override void Subscribe(object subscriber)
     {
         ObserverManagerSystem.SubscribeToLibrary(DictionaryTypes.OnCardSmoked, subscriber, this);
@@ -20,7 +22,18 @@ public class TowerSO : SideCardSO, IObserverOnCardSmoked
         SideCardDataHandler card = args.Sender as SideCardDataHandler;
         SmokeEventData data = (SmokeEventData)args.Data;
 
-        yield return card.owner.AddScore(data.cards.Count * ScoreAmount);      
+        int finalScore = 0;
+
+        foreach (var item in data.cards)
+        {
+            finalScore += ScoreAmount;
+            if (item.data.Tarot)
+            {
+                finalScore += ScoreAmount;
+            }
+        }
+
+        yield return card.owner.AddScore(finalScore);
     }
 
     public override bool CanTrigger(BaseCardDataHandler card, EventDataArgs args, DictionaryTypes EventType)

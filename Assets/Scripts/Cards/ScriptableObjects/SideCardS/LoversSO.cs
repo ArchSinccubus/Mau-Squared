@@ -7,6 +7,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Card", menuName = "Mau/Cards/Side/New LoversSO")]
 public class LoversSO : SideCardSO, IObserverOnCardPlayed
 {
+    public override bool Tarot => true;
+
     public override void Subscribe(object subscriber)
     {
         ObserverManagerSystem.SubscribeToLibrary(DictionaryTypes.OnCardPlayed, subscriber, this);
@@ -34,8 +36,8 @@ public class LoversSO : SideCardSO, IObserverOnCardPlayed
 
         if (top != null)
         {
-            return data.owner == card.owner && top.returnUnmodifiedData().cardColors.All(data.returnUnmodifiedData().cardColors.Contains) &&
-            top.returnUnmodifiedData().cardValues.All(data.returnUnmodifiedData().cardValues.Contains);
+            return data.owner == card.owner && (top.returnUnmodifiedData().cardColors.All(data.returnUnmodifiedData().cardColors.Contains) &&
+            top.returnUnmodifiedData().cardValues.All(data.returnUnmodifiedData().cardValues.Contains) || top.data.Tarot == card.baseData.Tarot);
         }
         return false;
     }

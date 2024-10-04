@@ -20,10 +20,9 @@ public class HarvestSO : HandCardSO, IObserverOnBuy
 
     public IEnumerator TriggerOnBuy(EventDataArgs args)
     {
-        PlayerHandler player = GameManager.currRun.player;
         HandCardDataHandler card = args.Sender as HandCardDataHandler;
 
-        card.AddScore(Score);
+        card.AddScore(ScoreAmount);
 
         yield return new WaitForGameEndOfFrame();
     }

@@ -36,8 +36,8 @@ public class ResultScreenHandler : MonoBehaviour
     }
 
     public void ResultsButtonPress()
-    { 
-        GameManager.instance.StartCoroutine(PressCoro(Win));
+    {
+        GameManager.currRun.CoroutineRunner.StartCoroutine(PressCoro(Win));
     }
 
     public IEnumerator PressCoro(bool win)

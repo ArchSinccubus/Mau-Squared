@@ -35,6 +35,8 @@ public class RoundLogicManager : MonoBehaviour, IGameScreen
     public int MaxPlayerCardScore;
     public int TimesSmoked, TimesRecycled, TimesCleaned;
 
+    public string backgroundName;
+
     Transform IGameScreen.transform { get => transform; }
     public ScreenMoverHelper MoverHelper { get => visuals.mover; }
 
@@ -205,16 +207,17 @@ public class RoundLogicManager : MonoBehaviour, IGameScreen
 
         foreach (var card in Pile) 
         {
-            if (card.owner == GameManager.currRun.player && !card.temp)
+            if (!card.temp)
             {
                 card.visuals.transform.rotation = Quaternion.identity;
-                StartCoroutine(list.CountCoroutine(GameManager.currRun.player.visuals.AddToDeck(card.visuals)));
+                StartCoroutine(list.CountCoroutine(card.owner.visuals.AddToDeck(card.visuals)));
                 //StartCoroutine(list.CountCoroutine(card.visuals.Flip(false)));
                 GameManager.currRun.player.currDeck.AddCardToShuffle(card);
                 yield return new WaitForGameSeconds(0.1f);
             }
             else
             {
+                yield return card.visuals.Vanish();
                 card.ClearForRound();
             }
         }

@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public class CardVisualHandler : MonoBehaviour, ICardVisuals, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+public class CardVisualHandler : MonoBehaviour, ICardVisuals, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler, IPointerMoveHandler
 {
     static int CANVAS_RAISE_AMOUNT = 15;
 
@@ -85,13 +85,14 @@ public class CardVisualHandler : MonoBehaviour, ICardVisuals, IBeginDragHandler,
 
     protected bool moving;
     protected bool dragged;
-    protected Vector2 origScale;
+    protected Vector3 origScale;
 
     bool CanvasOverrideFlag;
     int CanvasOverrideValue;
 
     public Image Border;
 
+    Vector3 lastPos;
 
     public void init(CardSOBase data, bool highlight, bool side, int CanvasOverride)
     {
@@ -125,7 +126,12 @@ public class CardVisualHandler : MonoBehaviour, ICardVisuals, IBeginDragHandler,
 
     private void Update()
     {
-        CardLoc.localScale = new Vector3(CardLoc.localScale.x, CardLoc.localScale.y, 1);
+        //CardLoc.localScale = new Vector3(CardLoc.localScale.x, CardLoc.localScale.y, 1);
+        if (!dragged)
+        {
+            lastPos = transform.position;
+        }
+
 
         if (SlotLoc != null && !moving && !dragged)
         {
@@ -143,7 +149,23 @@ public class CardVisualHandler : MonoBehaviour, ICardVisuals, IBeginDragHandler,
         
             }
         }
-        
+
+    }
+
+    private void LateUpdate()
+    {
+        //if (dragged)
+        //{
+        //    Debug.Log(transform.position);
+        //    Debug.Log(lastPos);
+        //} 
+
+        if (lastPos != transform.position)
+        {
+            Vector2 dist = transform.position - lastPos;
+
+            CardLoc.transform.localRotation = Quaternion.Euler(-dist.y * 100, dist.x * 100, CardLoc.transform.localRotation.eulerAngles.z);
+        }
     }
 
     public virtual void UpdateCard(List<Colors> newColor, string newText)
@@ -192,7 +214,7 @@ public class CardVisualHandler : MonoBehaviour, ICardVisuals, IBeginDragHandler,
 
     public void ResizeCard(float mult)
     {
-        if (origScale == Vector2.zero)
+        if (origScale == Vector3.zero)
         {
             CardLoc.localScale = new Vector3(rectTrans.localScale.x * mult, rectTrans.localScale.y * mult, 1); 
             SetOrigSize();
@@ -206,7 +228,7 @@ public class CardVisualHandler : MonoBehaviour, ICardVisuals, IBeginDragHandler,
 
     public void ResetSizeCard()
     {
-        if (origScale != Vector2.zero)
+        if (origScale != Vector3.zero)
         {
             CardLoc.localScale = origScale;
         }
@@ -470,7 +492,7 @@ public class CardVisualHandler : MonoBehaviour, ICardVisuals, IBeginDragHandler,
 
         yield return new WaitForGameEndOfFrame();
         transform.position = newPos;
-        
+        CardLoc.transform.localRotation = Quaternion.Euler(0, 0, CardLoc.transform.localRotation.eulerAngles.z);
 
         GameManager.EnableDrag();
         moving = false;
@@ -497,6 +519,7 @@ public class CardVisualHandler : MonoBehaviour, ICardVisuals, IBeginDragHandler,
         yield return new WaitForGameEndOfFrame();
 
         transform.position = newPos;
+        CardLoc.transform.localRotation = Quaternion.Euler(0, 0, CardLoc.transform.localRotation.eulerAngles.z);
 
         GameManager.EnableDrag();
         moving = false;
@@ -538,6 +561,17 @@ public class CardVisualHandler : MonoBehaviour, ICardVisuals, IBeginDragHandler,
             Click(false);
         }
     }
+    public void OnPointerMove(PointerEventData eventData)
+    {
+        if (IsHighlightable && !moving && !dragged)
+        {
+            Vector2 distFromCenter = (Vector2)transform.position - (Vector2)Camera.main.ScreenToWorldPoint(eventData.position);
+
+            CardLoc.transform.localRotation = Quaternion.Euler(-distFromCenter.y * 25, distFromCenter.x * 25, 0);
+
+            //Debug.Log(distFromCenter);
+        }
+    }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -556,7 +590,7 @@ public class CardVisualHandler : MonoBehaviour, ICardVisuals, IBeginDragHandler,
 
     public void OnPointerExit(PointerEventData eventData)
     {
-
+        button.transform.rotation = Quaternion.identity;
         if (IsHighlightable && !Highlighted)
         {
             BumpCardBack();
@@ -597,12 +631,15 @@ public class CardVisualHandler : MonoBehaviour, ICardVisuals, IBeginDragHandler,
 
     public void OnDrag(PointerEventData eventData)
     {
+        lastPos = transform.position;
+
         if (Draggable)
         {
-                transform.position = (Vector2)Camera.main.ScreenToWorldPoint(eventData.position);
-            
+
+            transform.position = (Vector2)Camera.main.ScreenToWorldPoint(eventData.position);
+
         }
-        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);        
     }
 
     public virtual void OnEndDrag(PointerEventData eventData)
@@ -662,12 +699,12 @@ public class CardVisualHandler : MonoBehaviour, ICardVisuals, IBeginDragHandler,
 
     public IEnumerator Peek()
     {
-        yield return MoveByTime(GetPos() + Vector2.left * 1.5f);
+        yield return MoveBySpace(GetPos() + Vector2.left * 1.5f);
     }
 
     public IEnumerator Return()
     {
-        yield return MoveByTime(GetPos() - Vector2.left * 1.5f);
+        yield return MoveBySpace(GetPos() - Vector2.left * 1.5f);
     }
 
     public IEnumerator Shake()
@@ -839,4 +876,6 @@ public class CardVisualHandler : MonoBehaviour, ICardVisuals, IBeginDragHandler,
         _tempTexture.Apply();
         return _tempTexture;
     }
+
+
 }

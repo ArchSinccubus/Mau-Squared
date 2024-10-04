@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff260533ed8e1754a9cc826b931f8c1a, type: 3}
+  m_Name: Queen Of Cups
+  m_EditorClassIdentifier: 
+  Name: Queen Of Cups
+  CardFront: {fileID: 21300000, guid: bff741c8815495a419bedda16b5bad7a, type: 3}
+  AIStrategyType: 0400000007000000
+  AIChoice: 0
+  AIAffectsSelf: 0
+  ScoreAmount: 0
+  MultAmount: 1.1
+  ChoiceAmount: 0
+  MoneyAmount: 0
+  NumberAmount: 0
+  Rarity: 1
+  cardColors: 02000000
+  cardValues: 
+  PreWild: 0
+  PostWild: 0

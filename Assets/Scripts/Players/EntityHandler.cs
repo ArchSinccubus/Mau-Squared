@@ -595,7 +595,7 @@ public class EntityHandler
 
     public virtual void RemoveSideCard(SideCardDataHandler card)
     {
-        GameManager.instance.StartCoroutine(card.visuals.Vanish());
+        visuals.StartCoroutine(card.visuals.Vanish());
         SideCards.Remove(card);
         visuals.RemoveFromSideCards(card.visuals); 
         PoolingManager.ReturnToPool(card.visuals);

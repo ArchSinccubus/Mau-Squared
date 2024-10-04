@@ -1,6 +1,7 @@
 using Assets.Scripts.Auxilary;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -10,6 +11,8 @@ public class DeckVisualHandler : MonoBehaviour, IDeck
     public List<ICardVisuals> Deck;
 
     public ClickableObject click;
+
+    public TextMeshProUGUI CardCount;
 
     public ClickableObject DeckClick { get { return click; } }
 
@@ -82,8 +85,16 @@ public class DeckVisualHandler : MonoBehaviour, IDeck
     {
         foreach (Transform item in transform)
         {
-            item.localPosition = transform.up * item.GetSiblingIndex() * 1.5f + transform.right * item.GetSiblingIndex();
+            item.localPosition = Vector3.up * item.GetSiblingIndex() * 1.5f + Vector3.right * item.GetSiblingIndex();
+            
         }
+
+        foreach (var item in Deck)
+        {
+            item.transform.rotation = Quaternion.identity;
+        }
+
+        CardCount.text = Deck.Count.ToString();
     }
 
     public Transform returnLocation()

@@ -6,6 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Card", menuName = "Mau/Cards/Hand/New StrengthSO")]
 public class StrengthSO : SideCardSO, IObserverOnRecycle
 {
+    public override bool Tarot => true;
+
     public override void Subscribe(object subscriber)
     {
         ObserverManagerSystem.SubscribeToLibrary(DictionaryTypes.OnRecycle, subscriber, this);
@@ -26,7 +28,15 @@ public class StrengthSO : SideCardSO, IObserverOnRecycle
 
         HandCardDataHandler[] CardsToClean = data.cards.Where(o => o.Smoked).ToArray();
         
-        yield return card.owner.CleanCards(CardsToClean);   
+        yield return card.owner.CleanCards(CardsToClean);
+
+        foreach (var item in CardsToClean)
+        {
+            if (item.data.Tarot)
+            {
+                item.MultTempMultScore(MultAmount);
+            }
+        }
     }
 
     public override bool CanTrigger(BaseCardDataHandler card, EventDataArgs args, DictionaryTypes EventType)

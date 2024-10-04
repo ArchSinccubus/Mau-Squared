@@ -1,10 +1,10 @@
 {
    "0 - The Fool": {
-      "Text": "Start each round with +{} points",
+      "Text": "Start each round with s{} points. Double it if you have a Tarot card in your opening hand",
       "Trigger": "+{}!"
    },
    "I - The Magician": {
-      "Text": "Activate: Smoke up to c{} cards in your hand. For each, gain +{} points",
+      "Text": "Activate: Smoke up to c{} cards in your hand. For each, gain s{} points. Gain double that for each smoked Tarot card",
       "ChoiceText": "Choose cards to smoke",
       "Activate": "+{}!"
    },
@@ -12,42 +12,42 @@
       "Text": "You can see the order of your cards when viewing the deck"
    },
    "III - The Empress": {
-      "Text": "When you draw a card, they each gain a temporary random color"
+      "Text": "When you draw a card, they each gain a temporary random color. Tarot cards gain n{} temporary colors instead"
    },
    "IV - The Emperor": {
-      "Text": "Activate: Choose up to c{} cards in your hand. They become temporary wilds",
+      "Text": "Activate: Choose up to c{} cards in your hand. They become temporary wilds. Tarot cards gain temporary x{} mult",
       "ChoiceText": "Choose cards to upgrade",
       "Activate": "Wild!"
    },
    "IX - The Hermit": {
-      "Text": "Whenever you play a card, if it shares no qualities with the top card, it gains temporary x{} mult",
+      "Text": "Whenever you play a card, if it shares no qualities with the top card or is a Tarot card, it gains temporary x{} mult",
       "Trigger": "x{}!"
    },
    "V - The Heirophant": {
-      "Text": "Whenever you play a vanilla card, it gains +{} points and x{} mult"
+      "Text": "Whenever you play a vanilla or Tarot card, it gains +{} points and x{} mult"
    },
    "VI - The Lovers": {
-      "Text": "Whenever you play a card, if it shares all colors and values with the top card, it gains temporary x{} mult",
+      "Text": "Whenever you play a card, if it shares all colors and values with the top card or is a Tarot card, it gains temporary x{} mult",
       "Trigger": "x{}!"
    },
    "VII - The Chariot": {
-      "Text": "At the end of your turns, Clean up c{} card in your hand",
+      "Text": "At the end of your turns, Clean up c{} card in your hand. Tarot cards cleaned this way gain temporary x{} mult",
       "ChoiceText": "Choose cards to clean"
    },
    "VIII - Justice": {
-      "Text": "Whenever your opponent Smokes a card of yours, they draw n{} card",
+      "Text": "Whenever your opponent Smokes a card of yours, they draw n{} card. If it was a Tarot card, they draw +{} cards instead",
       "Trigger": "Punished!"
    },
    "X - Wheel of Fortune": {
-      "Text": "Activate: Gain +{} score",
+      "Text": "Activate: Add a temporary random Tarot card to your hand",
       "Trigger": "+{}!"
    },
    "XI - Strength": {
-      "Text": "Whenever you recycle a Smoked card, Clean it",
+      "Text": "Whenever you recycle a Smoked card, Clean it. If it was a tarot card, it also gains x{} mult",
       "Trigger": "Cleaned!"
    },
    "XII - The Hanged Man": {
-      "Text": "When the round ends, gain +{} points for each card in your hand",
+      "Text": "When the round ends, gain +{} points for each card in your hand, and double that for each Tarot card in your hand",
       "Trigger": "+{}!"
    },
    "XIII - Death": {
@@ -55,34 +55,34 @@
       "Trigger": "Rebirth!"
    },
    "XIV - Temperance": {
-      "Text": "When the round ends, if no Side Card was Acticated, gain m{} money",
+      "Text": "When the round ends, gain m{} for each Tarot card in your deck",
       "Trigger": "m{}$!"
    },
    "XIX - The Sun": {
-      "Text": "When the round ends, gain m{} money for each card in your hand",
+      "Text": "When the round ends, gain m{} money for each card in your hand. Tarot cards give double that amount",
       "Trigger": "m{}$!"
    },
    "XV - The Devil": {
-      "Text": "Whenever you can't play a card on your turn, gain m{} money",
+      "Text": "Whenever you can't play a card on your turn, gain m{} money, then n{} random Tarot card in your hand becomes temporary wild",
       "Trigger": "m{}$!"
    },
    "XVI - The Tower": {
-      "Text": "Whenever you Smoke cards, gain +{} points for each card Smoked",
+      "Text": "Whenever you Smoke cards, gain +{} points for each card Smoked, and double that amount for each Tarot card",
       "Trigger": "+{}!"
    },
    "XVII - The Star": {
-      "Text": "Activate: Draw n{} card. If it can be played, Combo it and continue your turn"
+      "Text": "Activate: Draw n{} card. If it can be played or is a Tarot card, Combo it and continue your turn"
    },
    "XVIII - The Moon": {
-      "Text": "Whenever you draw a Smoked card, Clean it",
+      "Text": "Whenever you draw a Smoked card, Clean it. If it was a Tarot card, clean your entire hand",
       "Trigger": "Clean!"
    },
    "XX - Judgement": {
-      "Text": "Whenever your opponent Smokes a card of yours, they Smoke n{} random hand cards",
+      "Text": "Whenever your opponent Smokes a card of yours, they Smoke n{} random hand cards. Smore their entire hand if it was a Tarot card",
       "Trigger": "Punished!"
    },
    "XXI - The World": {
-      "Text": "If you ended the round, you gain x{} score Ante",
+      "Text": "When round ends, gain +{} for each Tarot card in your deck",
       "Trigger": "x{}!"
    },
    "Greed Card": {
@@ -115,7 +115,7 @@
       "Text": "All cards you play count as blue cards"
    },
    "Booster Pack": {
-      "Text": "Activate: Remove this card. Choose c{} of n{} random cards. Add it to your hand.",
+      "Text": "Activate: Remove this card. Choose 1 of n{} random cards. Add it to your hand.",
       "ChoiceText": "Choose card to add",
       "Activate": "Boosted!"
    },

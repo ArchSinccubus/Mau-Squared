@@ -6,6 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Card", menuName = "Mau/Cards/Side/New MoonSO")]
 public class MoonSO : SideCardSO, IObserverOnDraw
 {
+    public override bool Tarot => true;
+
     public override void Subscribe(object subscriber)
     {
         ObserverManagerSystem.SubscribeToLibrary(DictionaryTypes.OnDraw, subscriber, this);
@@ -21,6 +23,11 @@ public class MoonSO : SideCardSO, IObserverOnDraw
         List<HandCardDataHandler> data = args.Data as List<HandCardDataHandler>;
 
         HandCardDataHandler[] SmokedCards = data.Where(o => o.Smoked).ToArray();
+
+        if (SmokedCards.FirstOrDefault(o => o.data.Tarot) != null)
+        {
+            SmokedCards = card.owner.Hand.Where(o => o.Smoked).ToArray();
+        }
 
         yield return card.owner.CleanCards(SmokedCards);
     }

@@ -7,10 +7,14 @@ public class WheelFortuneSO : SideCardSO
 {
     public override bool Clickable => true;
 
+    public override bool Tarot => true;
+
     public override IEnumerator DoCommand(SideCardDataHandler card)
     {
-        int num = GameManager.currRun.RoundRand.NextInt(1, 10);
+        HandCardSO newCardSO = GameManager.instance.AssetLibrary.FetchRandomHandCard(GameManager.currRun.RoundRand, o => o.Tarot);
 
-        yield return card.owner.AddScore(num * ScoreAmount);
+        HandCardDataHandler newCard = new HandCardDataHandler(newCardSO, card.owner, true);
+
+        yield return card.owner.AddHandCard(newCard);
     }
 }

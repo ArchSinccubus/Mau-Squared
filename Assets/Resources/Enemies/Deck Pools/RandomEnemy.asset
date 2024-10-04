@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0c3d6fc63589f42a1f12d4a54c553f, type: 3}
   m_Name: RandomEnemy
   m_EditorClassIdentifier: 
-  mainStrat: 9
+  mainStrat: 0
   startingMoney: 5
   possibleHandCards:
   - Card: {fileID: 11400000, guid: 17d80f3fff3c1c34aa31d102fe396b77, type: 2}

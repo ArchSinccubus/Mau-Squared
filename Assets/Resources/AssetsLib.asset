@@ -121,7 +121,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0d54b8d973582ee439d21301a8dcd5c8, type: 2}
   HandCards:
     keys:
-    - 99 card
+    - Page Of Swords
     - Ante Up
     - Art Theft
     - Balanced Card
@@ -136,7 +136,7 @@ MonoBehaviour:
     - Color Change card
     - Comedy Comes in 3s
     - Copycat Card
-    - Devils Advocate
+    - King Of Pentacles
     - Dollar Bill
     - Draw 2 card
     - Draw 25 card
@@ -144,7 +144,7 @@ MonoBehaviour:
     - Emerald card
     - Explosive Gains
     - Factory Card
-    - Fair Market Price
+    - Page Of Pentacles
     - Fast and Furious
     - Final Word
     - Fix it in post
@@ -184,9 +184,9 @@ MonoBehaviour:
     - Painters Card
     - Patchwork
     - Perfume Card
-    - Piledriver
+    - Queen Of Swords
     - Plus Card
-    - Pools Closed
+    - King Of Cups
     - Post-it Note
     - Prism Card
     - Queue Card
@@ -198,29 +198,29 @@ MonoBehaviour:
     - Ruby card
     - Rush Job
     - Sapphire card
-    - Sauna
+    - Queen Of Cups
     - Cardigan
     - Shared Account
     - Short Squeeze
-    - Shrapnal Bomb
-    - Slow and Steady
+    - Azure-Eyed Ivory Drake
+    - Queen Of Wands
     - Smoke Bomb
     - Special Gavel
-    - Steamer card
+    - Page Of Cups
     - Stock Certificate
     - Straightjacket 8
     - Cardinal
     - Surfs Up!
     - Surprise card!
-    - Sweet Memories
+    - King Of Wands
     - Take 5
     - The Dynamo
     - The Nail
-    - Throwback
-    - Trade Offer Card
+    - Page Of Wands
+    - Queen Of Pentacles
     - Water Balloon
     - Where theres smoke, theres fire
-    - Wire Tap
+    - King Of Swords
     - X card
     - X of Cups
     - X of Pentacles

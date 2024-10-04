@@ -6,13 +6,15 @@ using static UnityEngine.EventSystems.EventTrigger;
 [CreateAssetMenu(fileName = "New Card", menuName = "Mau/Cards/Side/New StarSO")]
 public class StarSO : SideCardSO
 {
+    public override bool Tarot => true;
+
     public override bool Clickable => true;
 
     public override IEnumerator DoCommand(SideCardDataHandler card)
     {
         yield return card.owner.Draw(1);
 
-        if (card.owner.Hand[card.owner.Hand.Count - 1].Playable)
+        if (card.owner.Hand[card.owner.Hand.Count - 1].Playable || card.data.Tarot)
         {
             yield return card.owner.Hand[card.owner.Hand.Count - 1].PlayCard();
             card.owner.UpdateHand();

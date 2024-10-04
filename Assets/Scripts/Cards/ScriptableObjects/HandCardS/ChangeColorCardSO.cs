@@ -55,6 +55,8 @@ public class ChangeColorCardSO : HandCardSO
             tempCard.SetTempMainValue(0);
 
             list.Add(tempCard);
+
+            tempCard.IsShowToolTip = false;
         }
 
         CoroutineWithData<HandCardDataHandler[]> cd = new CoroutineWithData<HandCardDataHandler[]>(GameManager.Round, entity.MakeChoice(list.ToArray(), choiceText, 1, CardMenuChoiceMode.Forced, SetChoiceType.Transform));

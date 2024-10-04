@@ -9,6 +9,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Random = System.Random;
 using Debug = UnityEngine.Debug;
+using UnityEngine.UIElements;
+using UnityEditor;
 
 
 //Global Controller for the game at large. Will handle heavy duty tasks and run things along
@@ -41,11 +43,15 @@ public class GameManager : MonoBehaviour
 
     public static RunManager currRun;
 
+    public MonoBehaviour CoroutineRunner;
+
     public EventSystem ES;
 
     public RoundLogicManager currRound;
     public ShopLogicHandler currShop;
     public EnemyChoiceDataHandler currEnemyChoice;
+
+    public BackroundManager background;
 
     public PlayerVisualManager playerVis;
 
@@ -122,11 +128,11 @@ public class GameManager : MonoBehaviour
 
             GlobalSaveFormat.instance = JsonConvert.DeserializeObject<GlobalSaveFormat>(test, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore, NullValueHandling = NullValueHandling.Ignore });
 
-            
+            var isCorrect = GlobalSaveFormat.instance.UnlockedHandCards["Page Of Clubs"];
         }
-        catch (Exception e)
+        catch 
         {
-            Debug.LogError(e);
+            Debug.Log("Previous save file detected! Resetting to new format with new names");
 
             var test = new GlobalSaveFormat(globalVars);
 
@@ -152,7 +158,7 @@ public class GameManager : MonoBehaviour
         SettingsMenu.LoadMenu();
         SettingsMenu.SetSettings(SavedSettings);
         SettingsMenu.LoadSettings(SavedSettings);
-
+        
         //Application.logMessageReceived += Application_logMessageReceived;
     }
 
@@ -202,29 +208,35 @@ public class GameManager : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (!Pause && state != GameState.InMenu)
         {
-            startResetTimer = true;
-
-        }
-
-        if (Input.GetKeyUp(KeyCode.R) && startResetTimer)
-        {
-            startResetTimer = false;
-            resetTimer = 0;
-        }
-
-        if (startResetTimer)
-        {
-            resetTimer += Time.deltaTime;
-            if (resetTimer >= RESET_PRESS_TIME)
+            if (Input.GetKeyDown(KeyCode.R))
             {
-                //reset game here
+                startResetTimer = true;
 
+            }
+
+            if (Input.GetKeyUp(KeyCode.R) && startResetTimer)
+            {
                 startResetTimer = false;
                 resetTimer = 0;
             }
+
+            if (startResetTimer)
+            {
+                resetTimer += Time.deltaTime;
+                if (resetTimer >= RESET_PRESS_TIME)
+                {
+                    //reset game here
+                    StartCoroutine(ResetGame());
+
+
+                    startResetTimer = false;
+                    resetTimer = 0;
+                }
+            }
         }
+
         //if (Input.GetMouseButtonDown(0))
         //{
         //    Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -239,9 +251,17 @@ public class GameManager : MonoBehaviour
 
     #region Game Handling Methods
 
-    public void StartBurronClick()
-    { 
-        
+    public IEnumerator ResetGame()
+    {
+        yield return BlackoutScreen();
+
+        currRun.EndRun();
+
+        StartGame();
+
+        yield return new WaitForSeconds(3f);
+
+        yield return blackout.FadeScreen(false);
     }
 
     public void StartGame()
@@ -255,7 +275,7 @@ public class GameManager : MonoBehaviour
 
         ObserverManagerSystem.InitLibrary();
 
-        currRun = new RunManager(currRound, currShop, currEnemyChoice);
+        currRun = new RunManager(currRound, currShop, currEnemyChoice, background, CoroutineRunner);
 
         currRun.StartRun(AssetLibrary.FetchDeck("Basic"), false, SeedString);
 
@@ -274,7 +294,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Random Seed is set! Don't forget to disable it to enable true randomness again.");
         //90Q00USZ check this seed for an error with cards not having owners when you drag the side card in the enemy select screen
 
-        currRun = new RunManager(currRound, currShop, currEnemyChoice);
+        currRun = new RunManager(currRound, currShop, currEnemyChoice, background, CoroutineRunner);
 
         currRun.MauCardE = 0;
         currRun.MauCardP = 0;
@@ -301,7 +321,7 @@ public class GameManager : MonoBehaviour
 
         ObserverManagerSystem.InitLibrary();
 
-        currRun = new RunManager(currRound, currShop, currEnemyChoice);
+        currRun = new RunManager(currRound, currShop, currEnemyChoice, background, CoroutineRunner);
         currRun.LoadRun(save);
 
         currRun.MauCardE = save.MauCardE;
@@ -434,6 +454,7 @@ public class GameManager : MonoBehaviour
                 save.Smoked = currRun.roundScene.TimesSmoked;
                 save.Cleaned = currRun.roundScene.TimesCleaned;
                 save.Recycled = currRun.roundScene.TimesRecycled;
+                save.backgroundName = currRun.roundScene.backgroundName;
                 save.NPC = enemy;
                 break;
             case GameState.InShop:

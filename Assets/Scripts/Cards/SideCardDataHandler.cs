@@ -150,7 +150,7 @@ public class SideCardDataHandler : BaseCardDataHandler
 
     public override IEnumerator TriggerCardEffect(string text)
     {
-        Coroutine cor = GameManager.instance.StartCoroutine(visuals.PopText(text));
+        Coroutine cor = owner.visuals.StartCoroutine(visuals.PopText(text));
 
         yield return TriggerCardEffect();
         yield return cor;
@@ -185,7 +185,10 @@ public class SideCardDataHandler : BaseCardDataHandler
 
     public override void ShowToolTip()
     {
-        GameManager.instance.GenerateToopTip(data.Name, data.ReturnDescription(), "", "", "", false, false);
+        if (IsShowToolTip)
+        {
+            GameManager.instance.GenerateToopTip(data.Name, data.ReturnDescription(), "", "", "", false, false);
+        }
     }
 
     public override void InitVisuals(bool side, CardSOBase data, bool highlight, int CanvasOverride, bool Col)

@@ -21,6 +21,8 @@ public class CardSOBase : ScriptableObject, ISubscriber
 
     public virtual bool ChoiceCard => false;
 
+    public virtual bool Tarot => false;
+
     public virtual int BasePrice
     {
         get {
@@ -84,10 +86,10 @@ public class CardSOBase : ScriptableObject, ISubscriber
 
     public string ConvertStringToValues(string s)
     {
-        return s.Replace("+{}", ScoreAmount.ToString().
+        return s.Replace("+{}", ScoreAmount.ToString()).
             Replace("x{}", MultAmount.ToString()).
             Replace("c{}", ChoiceAmount.ToString()).
             Replace("m{}", MoneyAmount.ToString()).
-            Replace("n{}", NumberAmount.ToString()));
+            Replace("n{}", NumberAmount.ToString());
     }
 }

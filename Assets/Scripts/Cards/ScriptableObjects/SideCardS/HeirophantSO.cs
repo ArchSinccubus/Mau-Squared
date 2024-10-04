@@ -6,6 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Card", menuName = "Mau/Cards/Side/New HeirophantSO")]
 public class HeirophantSO : SideCardSO, IObserverOnCardPlayed
 {
+    public override bool Tarot => true;
+
     public override bool SilentTrigger => true;
 
     public override void Subscribe(object subscriber)
@@ -34,6 +36,6 @@ public class HeirophantSO : SideCardSO, IObserverOnCardPlayed
         EntityHandler entity = args.Caller as EntityHandler;
         HandCardDataHandler data = args.Data as HandCardDataHandler;
 
-        return data.data.GetType() == typeof(BasicCardSO) && card.owner == data.owner;
+        return (data.data.GetType() == typeof(BasicCardSO) || data.data.Tarot) && card.owner == data.owner;
     }
 }

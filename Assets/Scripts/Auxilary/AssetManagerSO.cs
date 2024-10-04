@@ -36,9 +36,6 @@ public class AssetManagerSO : ScriptableObject
     public UDictionary<string, SideCardSO> SideCards;
 
     [SerializeField]
-    UDictionary<AIType, EnemyGenerationPoolSO> EnemyPools;
-
-    [SerializeField]
     UDictionary<CardRarity, Sprite> RarityBorders;
 
     public void Init()
@@ -245,11 +242,6 @@ public class AssetManagerSO : ScriptableObject
     public SideCardSO[] FetchSideCards(Func<SideCardSO, bool> query)
     {
         return SideCards.Values.Where(query).ToArray();
-    }
-
-    public EnemyGenerationPoolSO returnPool(AIType type)
-    {
-        return EnemyPools[type];
     }
 
     public Sprite GetBorder(CardRarity rarity)

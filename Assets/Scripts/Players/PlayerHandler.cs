@@ -175,7 +175,7 @@ public class PlayerHandler : EntityHandler
             if (!item.temp)
             {
                 currDeck.AddCardToShuffle(item);
-                GameManager.instance.StartCoroutine(list.CountCoroutine(visuals.AddToDeck(item.visuals)));
+                visuals.StartCoroutine(list.CountCoroutine(visuals.AddToDeck(item.visuals)));
                 visuals.RemoveFromHand(item.visuals);
             }
             else

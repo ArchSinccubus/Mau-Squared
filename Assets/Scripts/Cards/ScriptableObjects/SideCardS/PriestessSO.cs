@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Card", menuName = "Mau/Cards/Hand/New PriestessSO")]
 public class PriestessSO : SideCardSO
 {
+    public override bool Tarot => true;
+
     public override bool Copyable => false;
 
 }

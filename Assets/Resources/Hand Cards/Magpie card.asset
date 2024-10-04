@@ -14,14 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Magpie card
   CardFront: {fileID: 21300000, guid: bff741c8815495a419bedda16b5bad7a, type: 3}
-  CardBack: {fileID: 21300000, guid: 1498d64a3e27de546970014cc29eb959, type: 3}
-  Description: When played, fetch a card from your deck to your hand
-  AIStrategyType: 060000000100000008000000
+  AIStrategyType: 06000000010000000800000007000000
   AIChoice: 0
   AIAffectsSelf: 0
+  ScoreAmount: 0
+  MultAmount: 0
+  ChoiceAmount: 0
+  MoneyAmount: 0
+  NumberAmount: 0
   Rarity: 2
   cardColors: 03000000
   cardValues: 
-  ColorWild: 0
-  ValueWild: 0
+  PreWild: 0
+  PostWild: 0
   choiceText: Choose a card to add

@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Card", menuName = "Mau/Cards/Side/New JusticeSO")]
 public class JusticeSO : SideCardSO, IObserverOnCardSmoked
 {
+    public override bool Tarot => true;
+
     public override void Subscribe(object subscriber)
     {
         ObserverManagerSystem.SubscribeToLibrary(DictionaryTypes.OnCardSmoked, subscriber, this);
@@ -18,7 +21,9 @@ public class JusticeSO : SideCardSO, IObserverOnCardSmoked
     {
         SmokeEventData data = (SmokeEventData)args.Data;
 
-        yield return data.cause.Draw(NumberAmount);
+        bool HasTarot = data.cards.FirstOrDefault(o => o.data.Tarot) != null;
+
+        yield return data.cause.Draw(HasTarot ? ScoreAmount : NumberAmount);
     }
     public override bool CanTrigger(BaseCardDataHandler card, EventDataArgs args, DictionaryTypes EventType)
     {

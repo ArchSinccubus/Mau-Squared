@@ -18,15 +18,22 @@ public class JudgementSO : SideCardSO, IObserverOnCardSmoked
     public IEnumerator TriggerOnSmoked(EventDataArgs args)
     {
         SmokeEventData data = (SmokeEventData)args.Data;
-
-        yield return data.cause.SmokeCards(data.cause, GetCardsToSmoke(data.cause).ToArray());      
+        bool HasTarot = data.cards.FirstOrDefault(o => o.data.Tarot) != null;
+        yield return data.cause.SmokeCards(data.cause, GetCardsToSmoke(data.cause, HasTarot).ToArray());      
     }
 
-    public List<HandCardDataHandler> GetCardsToSmoke(EntityHandler entity)
+    public List<HandCardDataHandler> GetCardsToSmoke(EntityHandler entity, bool all)
     {
         List<HandCardDataHandler> cardsToSmoke = new List<HandCardDataHandler>();
 
-        cardsToSmoke = GameManager.currRun.RoundRand.GetRandomElements(entity.Hand.Where(c => !c.Smoked).ToList(), NumberAmount);
+        if (!all)
+        {
+            cardsToSmoke = GameManager.currRun.RoundRand.GetRandomElements(entity.Hand.Where(c => !c.Smoked).ToList(), NumberAmount);
+        }
+        else
+        {
+            cardsToSmoke = entity.Hand;
+        }
 
         return cardsToSmoke;
     }

@@ -150,20 +150,26 @@ public class GlobalSaveFormat
 
     public static void CalculateStratForRun(AIStrategy strat)
     {
-        instance.StratCount[strat]++;
+        if (strat != AIStrategy.None)
+        {
+            instance.StratCount[strat]++;
 
-        int max = instance.StratCount.Max(o => o.Value);
+            int max = instance.StratCount.Max(o => o.Value);
 
-        instance.FaveStrat = instance.StratCount.Where(o => o.Value == max).Select(o => o.Key).First();
+            instance.FaveStrat = instance.StratCount.Where(o => o.Value == max).Select(o => o.Key).First();
+        }
     }
 
     public static void CalculateColorForRun(Colors color)
     {
-        instance.ColorCount[color]++;
+        if (color != Colors.None)
+        {
+            instance.ColorCount[color]++;
 
-        int max = instance.ColorCount.Max(o => o.Value);
+            int max = instance.ColorCount.Max(o => o.Value);
 
-        instance.FaveColor = instance.ColorCount.Where(o => o.Value == max).Select(o => o.Key).First();
+            instance.FaveColor = instance.ColorCount.Where(o => o.Value == max).Select(o => o.Key).First();
+        }
     }
 
     public static void EndRound(List<HandCardDataHandler> deck, List<SideCardDataHandler> sides, int RoundMoney, int SmokeAmount, int CleanAmount, int RecycleAmount, int RoundScore, int CardScore) 

@@ -192,7 +192,7 @@ public class ShopLogicHandler : MonoBehaviour, IGameScreen
 
         yield return ObserverManagerSystem.NotifyEvents(DictionaryTypes.OnShopExit, GameManager.currRun.player, GameManager.currRun.shopData);
 
-        GameManager.instance.StartCoroutine(GameManager.currRun.TriggerOnExitShop());
+        GameManager.currRun.CoroutineRunner.StartCoroutine(GameManager.currRun.TriggerOnExitShop());
     }
 
     public HandCardDataHandler[] GenerateHandCards()

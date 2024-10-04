@@ -19,3 +19,13 @@ MonoBehaviour:
   Cards:
     keys: []
     values: []
+  ShopBackground: {fileID: 21300000, guid: f94b10ffb46b5dc4698cafe6286915a6, type: 3}
+  Backgrounds:
+    keys:
+    - Wood
+    - Cloth
+    - Pool
+    values:
+    - {fileID: 21300000, guid: 9bc44bf1a2987134cb1a93671879f780, type: 3}
+    - {fileID: 21300000, guid: 977c4756585fb8d4d935f3fa3327fd49, type: 3}
+    - {fileID: 21300000, guid: d86331d495ebe5049850ad80acb99a09, type: 3}

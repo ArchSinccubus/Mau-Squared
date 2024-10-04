@@ -64,7 +64,7 @@ public class EnemyChoiceDataHandler : MonoBehaviour, IGameScreen
     public void SelectOpponent(NPCHandler npc)
     {
         Deload();
-        GameManager.instance.StartCoroutine(GameManager.currRun.TriggerOnExitChoice(npc));
+        GameManager.currRun.CoroutineRunner.StartCoroutine(GameManager.currRun.TriggerOnExitChoice(npc));
     }
 
 

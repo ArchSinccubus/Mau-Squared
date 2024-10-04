@@ -1,7 +1,4 @@
 {
-   "99 card": {
-      "Text": "When played, gain 99 points."
-   },
    "Ante Up": {
       "Text": "When played, multiply round Ante by x{}",
       "Played": "Ante Up!"
@@ -9,6 +6,10 @@
    "Art Theft": {
       "Text": "When you play a color-sharing card, gain temporary x{} mult ",
       "Trigger": "x{}!"
+   },
+   "Azure-Eyed Ivory Drake": {
+      "Text": "When played, smoke your opponent's hand, then recycle it",
+      "Played": "Smoked!"
    },
    "Balanced Card": {
       "Text": "When played, the player with less cards draws cards equal to the difference",
@@ -32,7 +33,7 @@
    "Card Squared": {
       "Text": "This card gains multiplier equal to its base value."
    },
-   "Cardigan": {
+   "Card-igan": {
       "Text": "When played, choose a card in your hand. It gains +{} points",
       "Played": "+{}!"
    },
@@ -62,16 +63,12 @@
       "ChoiceText": "Choose Color"
    },
    "Comedy Comes in 3s": {
-      "Text": "When played, you may choose a card in your hand. If it's a 3, it gains x{} mult. If not, it gains temporary x{} mult",
+      "Text": "When played, choose a card in your hand. If it's a 3, it gains x{} mult. If not, it gains temporary x{} mult",
       "ChoiceText": "Choose card to upgrade",
       "Trigger": "x{}!"
    },
    "Copycat Card": {
       "Text": "When another card is played, temporarily copy its main value"
-   },
-   "Devil's Advocate": {
-      "Text": "Gain +{} points. Your money becomes 0",
-      "Played": "Devil'd!"
    },
    "Dollar Bill": {
       "Text": "When played, gain m{} money",
@@ -98,10 +95,6 @@
       "Text": "When played, Smoke n{} random opponent's cards",
       "Played": "Smoked!"
    },
-   "Fair Market Price": {
-      "Text": "When played, give your opponent a card from your deck. Steal m{} money",
-      "Trigger": "+{}!"
-   },
    "Fast and Furious": {
       "Text": "Whenever you play a card, if this card is in your hand, it gains +{} temporary points",
       "Trigger": "+{}!"
@@ -124,7 +117,7 @@
       "Drawn": "Smoked!"
    },
    "Flashcard": {
-      "Text": "When played, draw d{} cards. They gain temporary x{} mult",
+      "Text": "When played, draw d{} cards. The gain temporary x{} mult",
       "Played": "Draw d{}!"
    },
    "Fog Forecast": {
@@ -185,6 +178,22 @@
       "Text": "When played, gain temporary x{} mult per card in pile",
       "Played": "{Mult}!"
    },
+   "King of Cups": {
+      "Text": "When played, gain temporary +{} points for each smoked card in your hand",
+      "Played": "+{}!"
+   },
+   "King of Pentacles": {
+      "Text": "Gain +{} points. Your money becomes 0",
+      "Played": "Bankrupt!"
+   },
+   "King of Swords": {
+      "Text": "Whenever you Activate a side card, this card gains x{} mult",
+      "Trigger": "x{}!"
+   },
+   "King of Wands": {
+      "Text": "When played, Refresh all Side Cards you have",
+      "Played": "Refreshed!"
+   },
    "Land Tax": {
       "Text": "When played, Smoke up to c{} cards. For each card, Steal m{} money",
       "ChoiceText": "Choose cards to Smoke",
@@ -236,12 +245,29 @@
       "Trigger": "Smoked!"
    },
    "NFT card": {
-      "Text": "When played, half your money. This card's score is your money * x{}",
+      "Text": "When played, half your money. This card's score is your money * +{}",
       "Played": "NFT'd!"
    },
    "No u card": {
       "Text": "If this card got Smoked due to opponent effect, Smoke their hand",
       "Played": "No u!"
+   },
+   "Page of Cups": {
+      "Text": "When played, smoke up to c{} cards in your hand. For each, this card gains temporary x{} mult",
+      "ChoiceText": "Choose cards to Smoke",
+      "Played": "x{}!"
+   },
+   "Page of Pentacles": {
+      "Text": "Whenever you gain Money in a Round, if this card is in your hand, it gains +{} points",
+      "Trigger": "+{}!"
+   },
+   "Page of Swords": {
+      "Text": "When played, choose c{} card in your hand. It gains +{} points."
+   },
+   "Page of Wands": {
+      "Text": "When played, choose a card from c{} random cards from the pile. Add a copy of it to your hand",
+      "ChoiceText": "Choose card to add",
+      "Played": "Throwback!"
    },
    "Painter's Card": {
       "Text": "When another card is played, temporarily copy its color(s)",
@@ -255,17 +281,10 @@
       "Text": "Starts rounds Smoked. When Cleaned, gain temporary x{} mult",
       "Trigger": "x{}!"
    },
-   "Piledriver": {
-      "Text": "This card's score is equal to cards in the pile * n{}"
-   },
    "Plus Card": {
       "Text": "When played, Combo another card",
       "ChoiceText": "Choose card to Combo",
       "Played": "Combo"
-   },
-   "Pool's Closed": {
-      "Text": "When played, gain temporary +{} points for each Smoked card in your hand",
-      "Played": "+{}!"
    },
    "Post-it Note": {
       "Text": "Whenever you play a card, if this card is in your hand, it gains temporary points equal to that card's main value",
@@ -273,6 +292,21 @@
    },
    "Prism Card": {
       "Text": "Always counts as all colors"
+   },
+   "Queen of Cups": {
+      "Text": "Whenever a card is smoked, if this card is in your hand, it gains x{} mult",
+      "Trigger": "x{}!"
+   },
+   "Queen of Pentacles": {
+      "Text": "When played, lose m{} Money. When Round ends, gain double the amount lost.",
+      "Played": "Invested!"
+   },
+   "Queen of Swords": {
+      "Text": "This card's score is equal to cards in the pile * n{}"
+   },
+   "Queen of Wands": {
+      "Text": "When another card is played, if this card is in your hand, this card gains +{} points",
+      "Trigger": "+{}!"
    },
    "Queue Card": {
       "Text": "When played, put the card at the bottom of the pile on top",
@@ -302,23 +336,11 @@
       "Played": "Combo"
    },
    "Sapphire card": {},
-   "Sauna": {
-      "Text": "Whenever a card is Smoked, if this card is in your hand, it gains x{} mult",
-      "Trigger": "x{}!"
-   },
    "Shared Account": {
       "Text": "This card's score is everyone's money * +{}"
    },
    "Short Squeeze": {
       "Text": "This card's score is your money * +{}"
-   },
-   "Shrapnal Bomb": {
-      "Text": "When played, Smoke your opponent's hand, then recycle it",
-      "Played": "Smoked!"
-   },
-   "Slow and Steady": {
-      "Text": "When another card is played, if this card is in your hand, this card gains +{} points",
-      "Trigger": "+{}!"
    },
    "Smoke Bomb": {
       "Text": "When played, Smoke n{} random opponent's deck cards",
@@ -327,11 +349,6 @@
    "Special Gavel": {
       "Text": "When played, recycle all cards in your hand",
       "Played": "Recycled!"
-   },
-   "Steamer card": {
-      "Text": "When played, Smoke up to c{} cards in your hand. For each, this card gains temporary x{} mult",
-      "ChoiceText": "Choose cards to Smoke",
-      "Played": "x{}!"
    },
    "Stock Certificate": {
       "Text": "When played, draw a card. Gain money equal to x{} its main value",
@@ -348,10 +365,6 @@
       "Text": "Completely random when played!",
       "Played": "Surprise!"
    },
-   "Sweet Memories": {
-      "Text": "When played, Refresh all Side Cards you have",
-      "Played": "Refreshed!"
-   },
    "Take 5": {
       "Text": "When played, your opponent draws n{} cards",
       "Played": "Draw n{}!"
@@ -364,25 +377,12 @@
       "Text": "When played, increase main value by n{}",
       "Played": "Nailed!"
    },
-   "Throwback": {
-      "Text": "When played, choose a card from c{} random cards from the pile. Add a copy of it to your hand",
-      "ChoiceText": "Choose card to add",
-      "Played": "Thrown!"
-   },
-   "Trade Offer Card": {
-      "Text": "When played, you may give your opponent a card from your hand. They give you 1 random card",
-      "Played": "Traded!"
-   },
    "Water Balloon": {
       "Text": "When played, Smoke a random opponent's deck card for each blue card in the pile",
       "Played": "Smoked!"
    },
    "Where there's Smoke, there's fire": {
       "Text": "Whenenever you draw, this card gains x{} mult for each Smoked card drawn",
-      "Trigger": "x{}!"
-   },
-   "Wire Tap": {
-      "Text": "Whenever you Activate a side card, this card gains x{} mult",
       "Trigger": "x{}!"
    },
    "X card": {

@@ -46,6 +46,8 @@ namespace Assets.Scripts.Auxilary
         public NPCHandler NPC;
 
         public int Smoked, Recycled, Cleaned;
+
+        public string backgroundName;
         #endregion
 
 

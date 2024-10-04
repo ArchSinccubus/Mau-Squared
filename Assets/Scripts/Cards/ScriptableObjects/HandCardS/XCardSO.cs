@@ -43,6 +43,8 @@ public class XCardSO : HandCardSO
             tempCard.SetTempMainValue(i);
 
             list.Add(tempCard);
+
+            tempCard.IsShowToolTip = false;
         }
 
         CoroutineWithData<HandCardDataHandler[]> cd = new CoroutineWithData<HandCardDataHandler[]>(GameManager.Round, entity.MakeChoice(list.ToArray(), choiceText, 1, CardMenuChoiceMode.Forced, SetChoiceType.Transform));

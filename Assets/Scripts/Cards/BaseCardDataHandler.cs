@@ -37,6 +37,8 @@ public class BaseCardDataHandler
     public object PermData1;
     public bool TempBool;
 
+    public bool IsShowToolTip;
+
 
     public virtual bool PlayerControl { get; set; }
 
@@ -52,6 +54,8 @@ public class BaseCardDataHandler
 
         TempData1 = null;
         TempData2 = null;
+
+        IsShowToolTip = true;
     }
 
     public BaseCardDataHandler(CardSOBase newData) 
@@ -66,6 +70,8 @@ public class BaseCardDataHandler
 
         TempData1 = null;
         TempData2 = null;
+
+        IsShowToolTip = true;
     }
 
     public BaseCardDataHandler(BaseCardDataHandler copy)
@@ -79,8 +85,9 @@ public class BaseCardDataHandler
 
         TempData1 = copy.TempData1;
         TempData2 = copy.TempData2;
-        TempBool = copy.TempBool; 
+        TempBool = copy.TempBool;
 
+        IsShowToolTip = true;
     }
 
     [JsonConstructor]
@@ -93,6 +100,8 @@ public class BaseCardDataHandler
         TempData2 = tempData2;
         PermData1 = permData1;
         TempBool = tempBool;
+
+        IsShowToolTip = true;
     }
 
     public virtual void InitForRound(bool highlight)

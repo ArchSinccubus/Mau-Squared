@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e0c3d6fc63589f42a1f12d4a54c553f, type: 3}
+  m_Name: PieceGatherEnemy
+  m_EditorClassIdentifier: 
+  mainStrat: 0
+  startingMoney: 0
+  possibleHandCards:
+  - Card: {fileID: 11400000, guid: 15816810916cc0b4ab4ad1035b4880e5, type: 2}
+    limit: 4
+    Weight: 10
+  - Card: {fileID: 11400000, guid: f6946130f20bdc645a2e47399412055d, type: 2}
+    limit: 4
+    Weight: 10
+  - Card: {fileID: 11400000, guid: 272c5bbd42bd734478f83f6ceedbea17, type: 2}
+    limit: 4
+    Weight: 10
+  - Card: {fileID: 11400000, guid: 24b0b84c885be124193e489a596f1efc, type: 2}
+    limit: 4
+    Weight: 10
+  - Card: {fileID: 11400000, guid: 35b2746a6db2e2848b5ccc5acfb60aae, type: 2}
+    limit: 4
+    Weight: 10
+  - Card: {fileID: 11400000, guid: 2d713391334cd7b46af2b943fad9a243, type: 2}
+    limit: 4
+    Weight: 10
+  - Card: {fileID: 11400000, guid: c39e9a0755df48d40993d6a5b31d122e, type: 2}
+    limit: 4
+    Weight: 10
+  - Card: {fileID: 11400000, guid: fea6409ecd04eed41b2da2f6110c8b3e, type: 2}
+    limit: 4
+    Weight: 10
+  - Card: {fileID: 11400000, guid: fd6109bf5dafdb941ac9f8149ad470c3, type: 2}
+    limit: 4
+    Weight: 10
+  - Card: {fileID: 11400000, guid: f46289134a7d38e49ad7f90ad776f932, type: 2}
+    limit: 4
+    Weight: 10
+  - Card: {fileID: 11400000, guid: ed8d77021ddaf6142883d386b89f391a, type: 2}
+    limit: 4
+    Weight: 10
+  - Card: {fileID: 11400000, guid: 715c910bcb524ea46aa36fe708145816, type: 2}
+    limit: 3
+    Weight: 5
+  - Card: {fileID: 11400000, guid: 88a33644ee26b754d93fe9dcb8d423d5, type: 2}
+    limit: 3
+    Weight: 5
+  - Card: {fileID: 11400000, guid: 30faa781fc792d04ebdf192d758f5363, type: 2}
+    limit: 2
+    Weight: 1
+  - Card: {fileID: 11400000, guid: 6c8a9bb2ac7e08a4a9f52a134432b085, type: 2}
+    limit: 2
+    Weight: 1
+  - Card: {fileID: 11400000, guid: 32d3f967fafdd1445a87420c1fd5dd24, type: 2}
+    limit: 2
+    Weight: 1
+  - Card: {fileID: 11400000, guid: 7dd62499224d1ba42a0974f6a1296eff, type: 2}
+    limit: 2
+    Weight: 1
+  - Card: {fileID: 11400000, guid: a49b8f9e074253043991bd5d9264e656, type: 2}
+    limit: 2
+    Weight: 1
+  - Card: {fileID: 11400000, guid: 3a6033c8688de5d49be7fe4d74aa4076, type: 2}
+    limit: 2
+    Weight: 1
+  possibleSideCards:
+  - Card: {fileID: 11400000, guid: 6b63920134ec4364eb06621a1d3b679c, type: 2}
+    Weight: 5
+  - Card: {fileID: 11400000, guid: e308a458f06e69542bdfd495ffdd0bb4, type: 2}
+    Weight: 1
+  - Card: {fileID: 11400000, guid: 39cd638c3d511be42a6c55fa018bdac7, type: 2}
+    Weight: 1
+  - Card: {fileID: 11400000, guid: 8b03bbd8ea3e11d41943d63d3bc9f038, type: 2}
+    Weight: 1
+  - Card: {fileID: 11400000, guid: 26ef6a717ca3c9949aaca33bf946b5b1, type: 2}
+    Weight: 1
+  - Card: {fileID: 11400000, guid: d6250b7184059dd4b964de0a1ff90a6d, type: 2}
+    Weight: 0.1

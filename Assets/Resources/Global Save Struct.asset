@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnlockedHandCards:
     keys:
-    - 99 card
+    - Page Of Swords
     - Ante Up
     - Art Theft
     - Balanced Card
@@ -29,7 +29,7 @@ MonoBehaviour:
     - Color Change card
     - Comedy Comes in 3s
     - Copycat Card
-    - Devils Advocate
+    - King Of Pentacles
     - Dollar Bill
     - Draw 2 card
     - Draw 25 card
@@ -37,7 +37,7 @@ MonoBehaviour:
     - Emerald card
     - Explosive Gains
     - Factory Card
-    - Fair Market Price
+    - Page Of Pentacles
     - Fast and Furious
     - Final Word
     - Fix it in post
@@ -74,9 +74,9 @@ MonoBehaviour:
     - Painters Card
     - Patchwork
     - Perfume Card
-    - Piledriver
+    - Queen Of Swords
     - Plus Card
-    - Pools Closed
+    - King Of Cups
     - Post-it Note
     - Prism Card
     - Queue Card
@@ -86,38 +86,38 @@ MonoBehaviour:
     - Ruby card
     - Rush Job
     - Sapphire card
-    - Sauna
+    - Queen Of Cups
     - Cardigan
     - Shared Account
     - Short Squeeze
-    - Shrapnal Bomb
-    - Slow and Steady
+    - Azure-Eyed Ivory Drake
+    - Queen Of Wands
     - Smoke Bomb
     - Special Gavel
-    - Steamer card
+    - Page Of Cups
     - Stock Certificate
     - Straightjacket 8
     - Cardinal
     - Surfs Up!
     - Surprise card!
-    - Sweet Memories
+    - King Of Wands
     - Take 5
     - The Dynamo
     - The Nail
-    - Throwback
-    - Trade Offer Card
+    - Page Of Wands
+    - Queen Of Pentacles
     - Water Balloon
     - Where theres smoke, theres fire
-    - Wire Tap
+    - King Of Swords
     - X card
     - X of Cups
     - X of Pentacles
     - X of Swords
     - X of Wands
-    - Right Gottem of the Prohibited One
-    - Left Furry Glove of the Prohibited One
     - Left Crocks of the Prohibited One
+    - Left Furry Glove of the Prohibited One
     - Right Socks with Sandles of the Prohibited One
+    - Right Gottem of the Prohibited One
     - Mau, the Prohibited One
     values: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
   UnlockedSideCards:
@@ -204,8 +204,8 @@ MonoBehaviour:
     - Sim Chip
     values: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
   StratCount:
-    keys: 000000000100000002000000030000000400000005000000060000000700000008000000
-    values: 000000000000000000000000000000000000000000000000000000000000000000000000
+    keys: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a000000
+    values: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   ColorCount:
-    keys: 00000000010000000200000003000000
-    values: 00000000000000000000000000000000
+    keys: 0000000001000000020000000300000004000000
+    values: 0000000000000000000000000000000000000000

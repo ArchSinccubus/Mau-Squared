@@ -34,13 +34,11 @@ public enum EventShiftOptions { First, Up, Down, End }
 #region AIEnums
 public enum AIType { Random, Dumb, Average, Smart, Master }
 
-public enum AITags { Smoke, Clean, Recycle, Score, Money, OpponentSmoke, OpponentClean, OpponentRecycle, PlayExtraCards, ScoreUpgrade, ColorUpgrade, CardDraw, Choice}
-
 public enum HandChoiceType {None, Smoke, Clean, Recycle, Upgrade, Transform, PlayExtra,  Other }
 
 public enum SetChoiceType { None, Transform, HandAdd, Effect, PreColor, PreValue, Other }
 
-public enum AIStrategy {None, HandEmpty, HighScore, SmokeOpponent, SmokeSelf, GetMoney, PileControl, PieceGather, All, Random}
+public enum AIStrategy {None, HandEmpty, HighScore, SmokeOpponent, SmokeSelf, GetMoney, PileControl, Tarot, PieceGather, All, Random}
 
 public enum AIEvalTypes { Average, Careful, LovesColors, LovesValues, Carefree, AnythingGoes }
 #endregion

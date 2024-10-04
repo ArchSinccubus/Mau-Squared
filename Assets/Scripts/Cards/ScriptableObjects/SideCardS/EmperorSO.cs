@@ -6,6 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Card", menuName = "Mau/Cards/Side/New EmperorSO")]
 public class EmperorSO : HandChoiceSideSO
 {
+    public override bool Tarot => true;
+
     public override bool Clickable => true;
 
     public override IEnumerator DoCommand(SideCardDataHandler card)
@@ -27,6 +29,11 @@ public class EmperorSO : HandChoiceSideSO
             foreach (HandCardDataHandler item in cd.result)
             {
                 item.SetTempWild();
+
+                if (item.data.Tarot)
+                {
+                    item.MultTempMultScore(MultAmount);
+                }
             }
         }
     }

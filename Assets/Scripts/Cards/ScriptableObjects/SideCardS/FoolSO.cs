@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Card", menuName = "Mau/Cards/Side/New FoolSO")]
 public class FoolSO : SideCardSO, IObserverOnStartRound
 {
+    public override bool Tarot => true;
+
     public override void Subscribe(object subscriber)
     {
         ObserverManagerSystem.SubscribeToLibrary(DictionaryTypes.OnRoundStart, subscriber, this);
@@ -20,7 +23,9 @@ public class FoolSO : SideCardSO, IObserverOnStartRound
         SideCardDataHandler card = args.Sender as SideCardDataHandler;
         EntityHandler entity = card.owner;
 
-        yield return entity.AddScore(ScoreAmount);
+        bool hasTarot = entity.Hand.FirstOrDefault(o => o.data.Tarot) != null;
+
+        yield return entity.AddScore(hasTarot ? ScoreAmount * 2 : ScoreAmount);
     }
     public override bool CanTrigger(BaseCardDataHandler card, EventDataArgs args, DictionaryTypes EventType)
     {

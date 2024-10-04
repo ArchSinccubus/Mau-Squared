@@ -6,6 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Card", menuName = "Mau/Cards/Side/New EmpressSO")]
 public class EmpressSO : SideCardSO, IObserverOnDraw
 {
+    public override bool Tarot => true;
+
     public override void Subscribe(object subscriber)
     {
         ObserverManagerSystem.SubscribeToLibrary(DictionaryTypes.OnDraw, subscriber, this);
@@ -20,20 +22,26 @@ public class EmpressSO : SideCardSO, IObserverOnDraw
     {
         List<HandCardDataHandler> data = args.Data as List<HandCardDataHandler>;
 
-            foreach (var item in data)
+        foreach (var item in data)
+        {
+            List<Colors> AddedColors = new List<Colors>();
+
+            var values = Enum.GetValues(typeof(Colors));
+            AddedColors.Add((Colors)values.GetValue(GameManager.currRun.RoundRand.NextInt(0, 4)));
+
+            if (item.data.Tarot)
             {
-                var values = Enum.GetValues(typeof(Colors));
-                Colors color = (Colors)values.GetValue(GameManager.currRun.RoundRand.NextInt(0, 4));
+                AddedColors.Add((Colors)values.GetValue(GameManager.currRun.RoundRand.NextInt(0, 4)));
+            }
 
+            yield return item.visuals.Wiggle();
 
-                yield return item.visuals.Wiggle();
+            yield return item.visuals.Flip(false);
 
-                yield return item.visuals.Flip(false);
+            item.SetTempColors(AddedColors, false);
 
-                item.SetTempColors(new List<Colors>() { color }, false);
-
-                yield return item.visuals.Flip(item.owner.IsPlayer);
-            }        
+            yield return item.visuals.Flip(item.owner.IsPlayer);
+        }        
     }
     public override bool CanTrigger(BaseCardDataHandler card, EventDataArgs args, DictionaryTypes EventType)
     {
